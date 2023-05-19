@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@import './reset.scss';
+@import './_variables.scss';
+@import './react-select.scss';
+@import 'react-redux-toastr/src/styles/index';
+
+:root {
+	--primary-color: #e6e6e6;
+	--gray-color-300: #d9dae8;
+	--gray-color-500: #999AA5;
+	--gray-color-600: #66676E;
+	--gray-color-700: #39393f;
+	--gray-color-800: #242529;
+	--gray-color-900: #191B1F;
+	--gray-color-950: #101215;
+	--yellow-color-700: #F5C521;
+	--white-color: rgb(255, 255, 255);
+	--black-color: rgb(255, 255, 255);
+	--dark-navy: #020c1b;
+
+	--fz-xxs: 12px;
+	--fz-xs: 13px;
+	--fz-sm: 14px;
+	--fz-md: 16px;
+	--fz-lg: 18px;
+	--fz-xl: 20px;
+	--fz-xxl: 22px;
+	--fz-sub-heading: 1.5vw;
+	--fz-heading: 2vw;
+
+	--shadow-list: 0px 0px 18px 0px var(--primary-color);
+	--shadow-logo: 3px 3px 2px var(--primary-color);
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Outfit', sans-serif;
+	background-color: var(--gray-color-900);
+}
+
+
+// section {
+// 	margin: 0 auto;
+// 	padding: 15px 0;
+// 	max-width: 1000px;
+
+// 	@media(max-width: 768px){
+// 		max-width: 500px;
+// 	}
+
+// 	@media(max-width: 480px){
+// 		padding: 60px 0;
+// 	}
+// }
+
+Scrollbar
+
+html {
+	scrollbar-width: thin;
+	scrollbar-color: rgb(95, 15, 192) rgb(143, 28, 28);
+}
+
+
+::-webkit-scrollbar {
+	width: 2px;
+}
+
+::-webkit-scrollbar-track{
+	background: var(--gray-color-700);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #505050;
+	border: 3px solid var(--gray-color-600);
+	border-radius: 10px;
+}
+
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+input[type='file'],
+input[type='file']::-webkit-file-upload-button {
+	cursor: pointer;
+	outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+input:focus {
+	box-shadow: none !important;
+}
+
+.admin-form {
+	width: 50%;
+	margin-top: 48px;
+}
+
+/* Slide animation */
+.slide-animation-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+
+.slide-animation-enter-active {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity 300ms, transform 300ms;
+}
+
+.slide-animation-exit {
+	opacity: 1;
+}
+
+.slide-animation-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 300ms, transform 300ms;
+}
+

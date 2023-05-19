@@ -1,0 +1,15 @@
+.navigation {
+	display: flex;
+	flex-direction: column;
+
+	@media(max-width: 768px){
+		
+	}
+	> div:first-child{
+
+	}
+}
+
+.active{
+	display: none;
+}

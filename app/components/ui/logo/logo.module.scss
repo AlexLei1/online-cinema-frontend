@@ -1,0 +1,19 @@
+.link {
+	img {
+		width: 133px;
+		transition: all ease-in-out .2s;
+		
+		&:hover {
+			filter: drop-shadow(var(--shadow-logo));
+		}
+		
+		@media(max-width: 1200px) {
+			max-width: 100px;
+		}
+		
+		@media(max-width: 768px) {
+			max-width: 100px;
+		}
+	
+	}
+}

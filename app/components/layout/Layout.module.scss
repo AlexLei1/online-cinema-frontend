@@ -1,0 +1,63 @@
+.layout {
+	position: relative;
+
+	> div:first-child,
+	> div:last-child {
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		width: 300px;
+		z-index: 1;
+		
+		margin-top: 68px;
+		padding: 0px 40px;
+		overflow-y: auto;
+		background-color: var(--gray-color-900);
+
+		@media(max-width: 1200px){
+			max-width: 80px;
+			padding: 40px 0px;
+		}
+
+	}
+
+	> div:first-child {
+		left: 0px;
+		border-right:1px solid;
+		border-right-width: 1px;
+		border-right-color: rgb(36 37 41 / 1);
+	}
+
+	> .wrapper {
+		margin: 0px auto;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+		padding: 0px 15px;
+		
+		@media (max-width: 1200px){
+			max-width: 1170px;
+		}
+		@media (max-width: 992px){	
+
+		}
+		@media (max-width: 768px){
+			
+		}
+		@media (max-width: 480px){
+			
+		}
+		@media (max-width: 320px){
+			
+		}
+
+	}
+
+	> div:last-child {
+		right: 0px;
+		border-left:1px solid;
+		border-left-width: 1px;
+		border-left-color: rgb(36 37 41 / 1);
+
+	}
+}

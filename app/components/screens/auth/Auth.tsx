@@ -12,9 +12,7 @@ import { useAuthRedirect } from './useAuthRedirect'
 
 const Auth: FC = () => {
 	useAuthRedirect()
-
 	const { isLoading } = useAuth()
-
 	const [type, setType] = useState<'login' | 'register'>('login')
 
 	const {
@@ -39,7 +37,7 @@ const Auth: FC = () => {
 		<Meta title="Auth">
 			<section className={styles.wrapper}>
 				<form onSubmit={handleSubmit(onSubmit)}>
-					<Heading title="Auth" className="mb-6" />
+					<Heading title="Auth" />
 					<AuthFields register={registerInput} formState={formState} />
 
 					<div className={styles.buttons}>

@@ -24,7 +24,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			props: { movies },
 		}
 	} catch (e) {
-		// console.log(errorCatch(e))
 
 		return {
 			notFound: true,

@@ -8,6 +8,7 @@ import { IHome } from './home.types'
 import styles from './home.module.scss'
 
 const Home: FC<IHome> = ({ slides, trendingMovies, actors }) => {
+
 	return (
 		<Meta
 			title="Watch movies online"

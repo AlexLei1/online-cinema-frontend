@@ -28,29 +28,49 @@
 		border-right-color: rgb(36 37 41 / 1);
 	}
 
-	> .wrapper {
+	> .wrapperOpen {
 		margin: 0px auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1680px;
     min-height: 100vh;
-		padding: 0px 15px;
-		
+		padding: 0px 340px;
+
 		@media (max-width: 1200px){
-			max-width: 1170px;
+			padding: 0px 120px;
 		}
 		@media (max-width: 992px){	
-
+			
 		}
 		@media (max-width: 768px){
-			
+			padding: 0px 100px;
 		}
 		@media (max-width: 480px){
-			
+			padding: 0px 95px;
 		}
 		@media (max-width: 320px){
-			
+			padding: 0px 90px;
 		}
+	}
 
+	> .wrapperClosed {
+		margin: 0px auto;
+		width: 100%;
+		max-width: 1080px;
+		min-height: 100vh;
+		padding: 0px 40px;
+
+		@media (max-width: 1200px){
+			padding: 0px 40px;
+		}
+		@media (max-width: 768px){
+			padding: 0px 20px;
+		}
+		@media (max-width: 480px){
+			padding: 0px 15px;
+		}
+		@media (max-width: 320px){
+			padding: 0px 10px;
+		}
 	}
 
 	> div:last-child {
@@ -58,6 +78,5 @@
 		border-left:1px solid;
 		border-left-width: 1px;
 		border-left-color: rgb(36 37 41 / 1);
-
 	}
 }

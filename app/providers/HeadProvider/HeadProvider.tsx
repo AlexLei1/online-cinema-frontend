@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import NextProgressBar from 'nextjs-progressbar'
 import { FC } from 'react'
-
 import { accentColor } from '@/configs/constants'
-
 import Favicons from './Favicons'
 
 const HeadProvider: FC = ({ children }) => {
@@ -23,7 +21,7 @@ const HeadProvider: FC = ({ children }) => {
 				/>
 
 				<Favicons />
-
+				
 				<meta name="theme-color" content={'#181B1E'} />
 				<meta name="msapplication-navbutton-color" content={'#181B1E'} />
 				<meta

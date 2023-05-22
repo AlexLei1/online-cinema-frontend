@@ -5,9 +5,27 @@
 	font-size: var(--fz-heading);
   line-height: 28px;
 
-	@media(max-width: 1400px){
-
+	@media (max-width: 1200px){
+		margin-bottom: 32px;
+		line-height: 28px;
 	}
+	@media (max-width: 992px){	
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 768px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 480px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 320px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+
 }
 
 .subHeading{
@@ -15,6 +33,27 @@
 	font-weight: 600;
 	font-size: var(--fz-sub-heading);
 	margin-bottom: 20px;
+	
+	@media (max-width: 1200px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 992px){	
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 768px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 480px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
+	@media (max-width: 320px){
+		margin-bottom: 32px;
+		line-height: 28px;
+	}
 }
 
 .description {

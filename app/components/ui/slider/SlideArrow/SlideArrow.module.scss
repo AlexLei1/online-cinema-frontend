@@ -1,11 +1,70 @@
 .arrow {
-	@apply flex items-center justify-center rounded-full bg-white bg-opacity-30 text-white text-2xl p-2 animate-fade absolute z-20 bottom-8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 100px;
+	background-color: rgba(255, 255, 255, 0.295);
+	font-size: 24px;
+  line-height: 32px;
+	padding: 8px;
+	animation: fade .5s ease-in-out;
+	position: absolute;
+	z-index: 20;
+	bottom: 32px;
+	color: white;
 
 	&.left {
-		@apply right-24;
+		right: 96px;
 	}
 
 	&.right {
-		@apply right-8;
+		right: 32px;
 	}
+
+
+	@media (max-width: 992px){	
+		font-size: 22px;
+		padding: 6px;
+		bottom: 25px;
+	}
+	@media (max-width: 768px){
+		font-size: 20px;
+		padding: 4px;
+		bottom: 20px;
+	}
+	@media (max-width: 480px){
+		font-size: 18px;
+		padding: 3px;
+		bottom: 15px;
+
+		&.left {
+			right: 60px;
+		}
+	
+		&.right {
+			right: 30px;
+		}
+	}
+	@media (max-width: 320px){
+		font-size: 12px;
+		padding: 3px;
+		bottom: 7px;
+
+		&.left {
+			right: 35px;
+		}
+	
+		&.right {
+			right: 10px;
+		}
+	}
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

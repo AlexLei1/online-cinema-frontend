@@ -20,7 +20,6 @@ const Home: FC<IHome> = ({ slides, trendingMovies, actors }) => {
 					{slides.length && <Slider slides={slides} />}
 				</section>
 			
-
 				<section>
 					<SubHeading title="Trending now" />
 					{trendingMovies.length && <Gallery items={trendingMovies} />}

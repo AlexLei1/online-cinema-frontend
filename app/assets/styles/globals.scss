@@ -30,8 +30,8 @@
 	--fz-lg: 18px;
 	--fz-xl: 20px;
 	--fz-xxl: 22px;
-	--fz-sub-heading: 1.5vw;
-	--fz-heading: 2vw;
+	--fz-sub-heading: clamp(14px, 4vw, 28px);
+	--fz-heading: clamp(16px, 6vw, 38px);
 
 	--shadow-list: 0px 0px 18px 0px var(--primary-color);
 	--shadow-logo: 3px 3px 2px var(--primary-color);
@@ -54,19 +54,19 @@ section {
 	}
 
 	@media (max-width: 992px){	
-		padding-top: 200px;
+		padding-top: 50px;
 	}
 
 	@media (max-width: 768px){
-		padding-top: 200px;
+		padding-top: 50px;
 	}
 
 	@media (max-width: 480px){
-		padding-top: 200px;
+		padding-top: 50px;
 	}
 
 	@media (max-width: 320px){
-		padding-top: 200px;;
+		padding-top: 50px;
 	}
 }
 

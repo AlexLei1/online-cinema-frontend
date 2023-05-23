@@ -1,8 +1,22 @@
 @import '../../../assets/styles/variables';
 
+
+
 .slider {
 	position: relative;
 	width: 100%;
+
+	button {
+		bottom: 32px;
+	}
+	button:first-child {
+		right: 96px;
+	}
+	button:last-child {
+		right: 32px;
+	}
+
+
 	.slide {
 		position: relative;
 		height: 320px;
@@ -120,9 +134,7 @@
 			}
 		}
 
-		@media (max-width: 1200px){
-
-		}
+	
 		@media (max-width: 992px){	
 			height: 250px;
 			border-radius: 20px;
@@ -142,6 +154,45 @@
 			height: 100px;
 			border-radius: 5px;
 			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.68);
+
+			
 		}
 	}
+
+	@media (max-width: 480px){
+		button {
+		bottom: 32px;
+	}
+
+		button:first-child {
+			right: 60px;
+		}
+	
+		button:last-child {
+			right: 30px;
+		}
+	}
+
+	@media (max-width: 320px){
+		button {
+			bottom: 32px;
+		}
+
+		button:first-child {
+			right: 35px;
+		}
+	
+		button:last-child {
+			right: 10px;
+		}
+	}
+
+	@media (max-width: 992px){	
+		bottom: 25px;
+	}
+	@media (max-width: 768px){
+		bottom: 20px;
+	}
+	
 }
+

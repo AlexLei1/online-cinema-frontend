@@ -2,44 +2,48 @@ import { FC } from 'react'
 import Carousel from 'react-multi-carousel'
 import { IGalleryItem } from './gallery.types'
 import GalleryItem from './GalleryItem'
-
 import styles from './Gallery.module.scss'
+import 'react-multi-carousel/lib/styles.css'
+import Arrow from './../Arrow/Arrow';
+
+
 
 const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
-
-	const responsive = {
-		superLargeDesktop: {
-			breakpoint: { max: 3000, min: 1024 },
-			items: 5,
-			
+	
+	const responsive: any = {
+		desktopBig: {
+			breakpoint: { max: 4000, min: 1200 },
+			items: 6,
 		},
 		desktop: {
-			breakpoint: { max: 3000, min: 1024 },
-			items: 3,
-
+			breakpoint: { max: 1200, min: 992 },
+			items: 5,
 		},
 		tablet: {
-			breakpoint: { max: 1024, min: 464 },
-			items: 2,
-
+			breakpoint: { max: 992, min: 768 },
+			items: 4,
 		},
 		mobile: {
-			breakpoint: { max: 464, min: 0 },
-			items: 1,
-
+			breakpoint: { max: 768, min: 480 },
+			items: 3,
+		},
+		mobileSmall: {
+			breakpoint: { max: 480, min: 320 },
+			items: 3,
 		}
 	};
-	
-	return (
-		<Carousel  responsive={responsive}>
-			<div>Item 1</div>
-			<div>Item 2</div>
-			<div>Item 3</div>
-			<div>Item 4</div>
 
-			{/* {items.map(item => (
+	return (
+		<Carousel  
+			responsive={responsive}
+			ssr={true}
+			containerClass={styles.containerClass}
+			customLeftArrow={<Arrow variant='left'/>}
+			customRightArrow={<Arrow variant='right'/>}
+		>
+			{items.map(item => (
 				<GalleryItem key={item.url} item={item} variant='vertical' />
-			))} */}
+			))}
 		</Carousel>
 	)
 }

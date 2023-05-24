@@ -1,29 +1,24 @@
 .heading{
   color: var(--white-color);
 	font-weight: 600;
-	margin-bottom: 32px;
+	padding: 100px 0px 40px 0px;
 	font-size: var(--fz-heading);
   line-height: 28px;
 
 	@media (max-width: 1200px){
-		margin-bottom: 32px;
-		line-height: 28px;
+		padding: 70px 0px 35px 0px;
 	}
 	@media (max-width: 992px){	
-		margin-bottom: 32px;
-		line-height: 28px;
+		padding: 70px 0px 30px 0px;
 	}
 	@media (max-width: 768px){
-		margin-bottom: 32px;
-		line-height: 28px;
+		padding: 70px 0px 25px 0px;
 	}
 	@media (max-width: 480px){
-		margin-bottom: 32px;
-		line-height: 28px;
+		padding: 70px 0px 20px 0px;
 	}
 	@media (max-width: 320px){
-		margin-bottom: 32px;
-		line-height: 28px;
+		padding: 70px 0px 15px 0px;
 	}
 
 }
@@ -35,23 +30,23 @@
 	margin-bottom: 20px;
 	
 	@media (max-width: 1200px){
-		margin-bottom: 32px;
+		
 		line-height: 28px;
 	}
 	@media (max-width: 992px){	
-		margin-bottom: 32px;
+		
 		line-height: 28px;
 	}
 	@media (max-width: 768px){
-		margin-bottom: 32px;
+		
 		line-height: 28px;
 	}
 	@media (max-width: 480px){
-		margin-bottom: 32px;
+		
 		line-height: 28px;
 	}
 	@media (max-width: 320px){
-		margin-bottom: 32px;
+		
 		line-height: 28px;
 	}
 }

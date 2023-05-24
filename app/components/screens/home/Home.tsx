@@ -15,8 +15,9 @@ const Home: FC<IHome> = ({ slides, trendingMovies, actors }) => {
 			description="Watch MovieApp movies and TV shows online or stream right to your browser."
 		>
 			<div className={styles.homePage}>
+				<Heading title="Watch movies online"/>
+				
 				<section>
-					<Heading title="Watch movies online"/>
 					{slides.length && <Slider slides={slides} />}
 				</section>
 			

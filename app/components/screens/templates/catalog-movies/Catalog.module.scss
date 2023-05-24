@@ -1,19 +1,25 @@
-.heading {
-	@apply mb-3;
-}
 
 .movies {
-	@apply flex flex-wrap mt-8;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
 
 	> a {
-		@apply mr-8 animate-fade;
+		max-width: 30%;
+		animation: fade .5s ease-in-out;
 	}
 
 	> a:nth-child(3n) {
-		@apply mr-0;
+		margin-right: 0px;
 	}
 }
 
 .button {
-	@apply btn-primary py-2 px-10;
+	background-color: #E30B13;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color .3s ease-in-out;
+	padding: 8px 40px
 }

@@ -1,9 +1,6 @@
 import { GetStaticProps, NextPage } from 'next'
-
 import Catalog from '@/components/screens/templates/catalog-movies/Catalog'
-
 import { IMovie } from '@/shared/types/movie.types'
-
 import { MovieService } from '@/services/movie/movie.service'
 
 const FreshPage: NextPage<{ movies: IMovie[] }> = ({ movies }) => {

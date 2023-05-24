@@ -1,8 +1,6 @@
 import { GetStaticProps, NextPage } from 'next'
-
 import Collections from '@/screens/collections/Collections'
 import { ICollection } from '@/screens/collections/collections.types'
-
 import { GenreService } from '@/services/genre/genre.service'
 
 const GenresPage: NextPage<{ collections: ICollection[] }> = ({

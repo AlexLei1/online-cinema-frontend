@@ -4,10 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
-@import './reset.scss';
-@import './_variables.scss';
-@import './react-select.scss';
-@import 'react-redux-toastr/src/styles/index';
+
 
 :root {
 	--primary-color: #e6e6e6;
@@ -47,24 +44,23 @@ body {
 
 section {
 	padding: 40px 0px 40px 0px;
-
-	@media (max-width: 1200px){
+	@include desktopM {
 		padding: 35px 0px 35px 0px;
 	}
 
-	@media (max-width: 992px){	
+	@include desktopXS {
 		padding: 30px 0px 30px 0px;
 	}
 
-	@media (max-width: 768px){
+	@include tabletL {
 		padding: 25px 0px 25px 0px;
 	}
 
-	@media (max-width: 480px){
+	@include mobileL {
 		padding: 20px 0px 20px 0px;
 	}
 
-	@media (max-width: 320px){
+	@include mobileS {
 		padding: 15px 0px 15px 0px;
 	}
 }

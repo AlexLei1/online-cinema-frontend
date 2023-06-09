@@ -1,3 +1,4 @@
+@import 'assets/styles/variables';
 .header {
 	width: 100%;
 	display: flex;
@@ -5,8 +6,11 @@
 	align-items: center;
 	position: fixed;
 	z-index: 1000;
-	background-color: transparent;
+	background-color: $gray-color-900;
+	backdrop-filter: blur(5px);
 	padding: 10px 40px;
+	transition: $transition;
+
 
 	> div {
 		display: flex;
@@ -26,4 +30,14 @@
 	@media(max-width: 768px) {
 		padding: 10px 20px;
 	}
+}
+
+.up {
+	transform: translateY(0px);
+	background-color: $gray-transparent-color-900;
+	box-shadow: 0 10px 30px -10px $gray-color-900;
+}
+
+.down {
+	transform: translateY(calc(70px) * -1);
 }

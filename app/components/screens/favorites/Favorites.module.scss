@@ -1,4 +1,5 @@
-@import '../../../assets/styles/variables';
+@import 'app/assets/styles/mixins';
+
 
 .favorites {
 	@apply flex flex-wrap mt-12;

@@ -3,12 +3,15 @@ import Logo from '@/ui/logo/Logo';
 import Search from './Search/Search';
 import styles from './header.module.scss'
 import Burger from '@/ui/burger/Burger';
+import cn from 'classnames'
+import {useScrollDirection} from '@/hooks/useScrollDirection';
 
 
-
-const Header = () => {
+const Header: FC = () => {
+	const scrollDir = useScrollDirection()
+	
 	return (
-		<header className={styles.header}>
+		<header className={cn(styles.header, {[styles.up]: (scrollDir === 'up')},  {[styles.down]: (scrollDir === 'down')})}>
 			<div>
 				<Logo/>
 				<Burger/>

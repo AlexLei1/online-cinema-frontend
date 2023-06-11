@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IBurgerState } from './burger.interface';
 
+
 const initialState: IBurgerState = {
-	isShow: false
+	isShow: true
 }
 
 export const burgerSlice = createSlice({

@@ -2,7 +2,7 @@ import Cookies from 'js-cookie'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { FC, useEffect } from 'react'
-import { useActions } from '@/hooks/useActions'
+import  useActions  from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 import { TypeComponentAuthFields } from '@/shared/types/auth.types'
 

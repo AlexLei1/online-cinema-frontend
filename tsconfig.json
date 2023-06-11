@@ -29,6 +29,6 @@
 			"@/store/*": ["store/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "app/hooks/useScrollDirection.js", "app/hooks/useScrollDirection.js"],
 	"exclude": ["node_modules"]
 }

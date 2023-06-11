@@ -18,6 +18,7 @@ const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
 	return (
 		<div className={styles.menu}>
 			<MenuHeading title={title}/>
+			
 			<ul className={styles.ul}>
 				{items.map((item) => (
 					isWidth ? <MenuItem key={item.link} item={item} /> : <MenuItemMobile key={item.link} item={item} />

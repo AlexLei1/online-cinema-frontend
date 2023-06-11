@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import styles from './Burger.module.scss'
 import cn from 'classnames'
-import { useActions } from '@/hooks/useActions';
+import  useActions  from '@/hooks/useActions';
 import { useBurger } from '@/hooks/useBurger';
 
 const Burger: FC = () => {

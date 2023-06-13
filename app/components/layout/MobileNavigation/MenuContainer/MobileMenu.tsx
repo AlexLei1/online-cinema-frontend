@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import { FC } from 'react'
-import styles from './Menu.module.scss'
+import styles from './MobileMenu.module.scss'
 import MenuItem from './MenuItem'
 import MenuItemMobile from './MenuItemMobile'
 import { IMenu } from './menu.types'
@@ -11,7 +11,7 @@ const DynamicAuthItems = dynamic(() => import('./auth/AuthItems'), {
 	ssr: false,
 })
 
-const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
+const MobileMenu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
 
 	const {isWidth} = useResize()
 
@@ -29,4 +29,4 @@ const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
 	)
 }
 
-export default Menu
+export default MobileMenu

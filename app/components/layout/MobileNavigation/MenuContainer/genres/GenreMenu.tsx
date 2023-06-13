@@ -1,6 +1,6 @@
 import SkeletonLoader from '@/ui/skeleton-loader/SkeletonLoader'
 
-import Menu from '../Menu'
+import MobileMenu from '../MobileMenu'
 
 import { usePopularGenres } from './usePopularGenres'
 
@@ -12,7 +12,7 @@ const GenreMenu = () => {
 			<SkeletonLoader count={5} className="h-7 mt-6" />
 		</div>
 	) : (
-		<Menu
+		<MobileMenu
 			menu={{
 				title: 'Popular genres',
 				items: data || [],

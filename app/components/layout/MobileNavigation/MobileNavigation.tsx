@@ -11,7 +11,7 @@ interface IMobileNavigation {
 
 const MobileNavigation: FC<IMobileNavigation> = ({isShow}) => {
 	const {toggleBurger} = useActions()
-	const {ref} = useOnClickOutside(toggleBurger, isShow)
+	const {ref} = useOnClickOutside(toggleBurger, !isShow)
 
 	return (
 		<div ref={ref} hidden={isShow} className={cn(styles.navigation)}>

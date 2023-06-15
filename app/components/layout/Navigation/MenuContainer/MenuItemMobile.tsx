@@ -22,10 +22,7 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 	return (
 		<li className={cn({[styles.active]: asPath === item.link})}>
 			<Link href={item.link}>
-				<a onClick={() => toggleBurger({isShow})}>
-					<MaterialIcon name={item.icon} />
-					<span>{item.title}</span>
-				</a>
+				<a onClick={() => toggleBurger({isShow})}><MaterialIcon name={item.icon} /><span>{item.title}</span></a>
 			</Link>
 		</li>
 	)

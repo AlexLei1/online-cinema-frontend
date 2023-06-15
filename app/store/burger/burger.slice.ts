@@ -3,7 +3,7 @@ import { IBurgerState } from './burger.interface';
 
 
 const initialState: IBurgerState = {
-	isShow: true
+	isShow: false
 }
 
 export const burgerSlice = createSlice({

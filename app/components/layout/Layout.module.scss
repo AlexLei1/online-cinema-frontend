@@ -30,57 +30,6 @@
 		border-right-color: rgb(36 37 41 / 1);
 	}
 
-	> .wrapperOpen {
-		margin: 0px auto;
-    width: 100%;
-    max-width: 1680px;
-    min-height: 100vh;
-		padding: 0px 340px;
-		transition: $transition;
-		filter: blur(10px);
-
-		@media (max-width: 1200px){
-			padding: 0px 120px;
-		}
-		@media (max-width: 992px){	
-			padding: 0px 110px;
-		}
-		@media (max-width: 768px){
-			padding: 0px 100px;
-		}
-		@media (max-width: 480px){
-			padding: 0px 95px;
-		}
-		@media (max-width: 320px){
-			padding: 0px 90px;
-		}
-	}
-
-	> .wrapperClosed {
-		margin: 0px auto;
-		width: 100%;
-		max-width: 1080px;
-		min-height: 100vh;
-		padding: 0px 40px;
-		transition: $transition;
-
-		@media (max-width: 1200px){
-			padding: 0px 40px;
-		}
-		@media (max-width: 992px){	
-			padding: 0px 30px;
-		}
-		@media (max-width: 768px){
-			padding: 0px 20px;
-		}
-		@media (max-width: 480px){
-			padding: 0px 15px;
-		}
-		@media (max-width: 320px){
-			padding: 0px 10px;
-		}
-	}
-
 	> div:last-child {
 		right: 0px;
 		border-left:1px solid;
@@ -88,3 +37,4 @@
 		border-left-color: rgb(36 37 41 / 1);
 	}
 }
+

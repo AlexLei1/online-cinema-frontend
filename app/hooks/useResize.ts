@@ -6,7 +6,7 @@ const useResize = () => {
 
   useEffect(() => {
     const handleResize = (event: any) => {
-			const width = event.target.innerWidth >= 1200
+			const width = event.target.innerWidth > 1200
       setIsWidth(width);
     };
     window.addEventListener('resize', handleResize);

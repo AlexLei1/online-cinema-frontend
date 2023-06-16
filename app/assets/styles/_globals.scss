@@ -4,8 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
-
-
 :root {
 	--primary-color: #e6e6e6;
 	--gray-color-300: #d9dae8;
@@ -39,7 +37,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Outfit', sans-serif;
-	background-color: var(--gray-color-900);
+	background-color: $gray-color-900;
 }
 
 section {
@@ -78,12 +76,12 @@ html {
 }
 
 ::-webkit-scrollbar-track{
-	background: var(--gray-color-700);
+	background: $gray-color-700;
 }
 
 ::-webkit-scrollbar-thumb {
 	background-color: #505050;
-	border: 3px solid var(--gray-color-600);
+	border: 3px solid $gray-color-600;
 	border-radius: 10px;
 }
 
@@ -146,55 +144,23 @@ input:focus {
 	right: calc(4% + 1px);
 }
 
-.wrapperOpen {
+.wrapper {
 	margin: 0px auto;
 	width: 100%;
 	max-width: 1680px;
 	min-height: 100vh;
-	padding: 0px 340px;
 	transition: $transition;
-	filter: blur(10px);
-	pointer-events: none;
-	cursor: default;
-
-	@media (max-width: 1200px){
-		padding: 0px 120px;
-	}
-	@media (max-width: 992px){	
-		padding: 0px 110px;
-	}
-	@media (max-width: 768px){
-		padding: 0px 100px;
-	}
-	@media (max-width: 480px){
-		padding: 0px 95px;
-	}
-	@media (max-width: 320px){
-		padding: 0px 90px;
-	}
+	padding: 0px 15px;
 }
 
-.wrapperClosed {
-	margin: 0px auto;
-	width: 100%;
-	max-width: 1080px;
-	min-height: 100vh;
-	padding: 0px 40px;
-	transition: $transition;
+.menuOpen {
+	padding: 0px 315px;
 
-	@media (max-width: 1200px){
-		padding: 0px 40px;
-	}
-	@media (max-width: 992px){	
-		padding: 0px 30px;
-	}
-	@media (max-width: 768px){
-		padding: 0px 20px;
-	}
-	@media (max-width: 480px){
+	@include desktopM {
 		padding: 0px 15px;
-	}
-	@media (max-width: 320px){
-		padding: 0px 10px;
+		filter: blur(10px);
+		pointer-events: none;
+		cursor: default;
 	}
 }
+

@@ -12,12 +12,12 @@
 		width: 300px;
 		z-index: 1;
 		
-		margin-top: 68px;
+		margin-top: 50px;
 		padding: 0px 40px;
 		overflow-y: auto;
 		background-color: $gray-color-900;
 
-		@media(max-width: 1200px){
+		@include desktopM {
 			max-width: 80px;
 			padding: 0px 0px;
 		}

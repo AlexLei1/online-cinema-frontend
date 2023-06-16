@@ -1,7 +1,10 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .list {
 	margin: 40px 0px;
 
-	@media(max-width: 1200px){
+	@include desktopM{
 		margin: 40px 0px;
 	}
 
@@ -12,16 +15,15 @@
 	.button {
 		display: block;
 		text-align: center;
-		background-color: var(--primary-color);
+		background-color: $primary-color;
 		color: #fff;
 		border-radius: 10px;
 		transition: background-color .3s ease-in-out;
 		padding: 10px;
 
-		@media(max-width: 1200px){
+		@include desktopM{
+			font-size: $fz-xxs;
 			border: none;
-			background-color: transparent;
-
 		}
 
 		&:hover {
@@ -36,7 +38,7 @@
 		margin-bottom: 16px;
 	
 
-		@media(max-width: 1200px){
+		@include desktopM{
 			&:hover{
 				.info{
 					display: none;
@@ -54,7 +56,7 @@
 
 			
 
-			@media(max-width: 1200px){
+			@include desktopM{
 				border-radius: 8px;
 				grid-column: 1 / -1;
 			}
@@ -68,7 +70,7 @@
 					border: 1px solid transparent !important;
 					transition: all ease-in-out .2s;
 
-					@media(max-width: 1200px){
+					@include desktopM{
 						filter: blur(5px);
 					}
 				}
@@ -79,7 +81,7 @@
 					border-color: var(--primary-color) !important;
 					box-shadow: var(--shadow-list);
 					
-					@media(max-width: 1200px){
+					@include desktopM{
 						filter: none;
 					}
 				}

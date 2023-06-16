@@ -1,15 +1,18 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .menu {
 	margin: 40px 0px;
 	animation: fade .5s ease-in-out;
 	
 	.heading {
-		color: var(--gray-color-300);
+		color: $gray-color-300;
 		text-transform: uppercase;
 		font-size: 7px;
   	line-height: 20px;
 		font-weight: 600;
 
-		@media(max-width: 1200px){
+		@include desktopM {
 			text-align: center;
 			font-size: 12px;
 			line-height: 12px;
@@ -22,44 +25,36 @@
 		justify-content: flex-start;
 		margin-top: 10px;
 
-	
-
 		> li {
-			border: 2px red;
-			border-right: 2px;
-			transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-			transition-timing-function: ease-in-out;
-			transition-duration: 200ms;
 			padding: 10px 0px;
 
 			> a {
 				display: flex;
 				align-items: center;
-				color: var(--gray-color-600);
+				color: $gray-color-600;
 				cursor: pointer;
 
-				@media(max-width: 1200px){
+				@include desktopM{
 					flex-direction: column;
 				}
 				
 				> span {
 					margin-left: 12px;
-					font-size: var(--fz-lg);
+					font-size: $fz-lg;
   				line-height: 28px;
 					&:hover {
-						color: var(--gray-color-500);
+						color: $gray-color-500;
 					}
 
-					@media(max-width: 1200px){
+					@include desktopM{
 						margin: 0;
-						font-size: var(--fz-xxs);
+						font-size: $fz-xxs;
 						line-height: 12px;
-
 					}
 				}
 
 				> svg {
-					font-size: var(--fz-xxl);
+					font-size: $fz-xxl;
 				}
 
 				> span,
@@ -71,23 +66,14 @@
 			}
 
 			&.active {
-				border-right-color: rgb(227 11 19 / 1);
 				> a > span {
-					color: rgb(255 255 255 / 1);
+					color: $white-color;
 				}
 
 				> a > svg {
-					fill: #E30B13;
+					fill: $primary-color;
 				}
 			}
 		}
-	}
-}
-@keyframes fade {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
 	}
 }

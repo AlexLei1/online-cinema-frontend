@@ -14,21 +14,21 @@ const Layout: FC = ({ children }) => {
 	const {isWidth} = useResize()
 	const {toggleBurger} = useActions()
 	const {ref} = useOnClickOutside(toggleBurger, !burger.isShow)
+	
 
 	useEffect(() => {
-		!burger.isShow && !isWidth ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
- 	}, [!burger.isShow]);
+		!burger.isShow !== isWidth ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
+ 	}, [burger.isShow, isWidth]);
 
-	
+
 	return (
-	
 		<>
 			<div ref={ref} className={styles.layout}>
 				<Navigation isShow={burger.isShow}/> 
 				<Header isShow={burger.isShow}/>
 				<Sidebar isShow={burger.isShow}/>
 			</div>
-			<div className={cn(!burger.isShow ? 'wrapperOpen' : 'wrapperClosed')}>{children}</div>
+			<div className={cn([!burger.isShow ? 'menuOpen' : ''], 'wrapper') }>{children}</div>
 		</>
 	)
 }

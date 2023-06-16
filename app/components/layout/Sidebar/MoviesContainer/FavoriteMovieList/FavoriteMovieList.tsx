@@ -4,6 +4,7 @@ import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
 import { useAuth } from '@/hooks/useAuth'
 import MovieList from '../MovieList'
 import NotAuthFavorites from './NotAuthFavorites'
+import styles from './FavoriteMovie.moudule.scss'
 
 const FavoriteMovieList: FC = () => {
 	const { isLoading, favoritesMovies } = useFavorites()
@@ -11,9 +12,10 @@ const FavoriteMovieList: FC = () => {
 
 	if (!user) return <NotAuthFavorites />
 
+
 	return isLoading ? (
 		<div className="mt-11">
-			<SkeletonLoader count={3} className="h-28 mb-4" />
+			<SkeletonLoader count={3} className={styles.movie} />
 		</div>
 	) : (
 		<MovieList

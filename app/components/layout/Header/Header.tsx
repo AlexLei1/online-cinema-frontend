@@ -19,8 +19,8 @@ const Header: FC<IHeader> = ({isShow}) => {
 	return (
 		<header className={cn(styles.header, {[styles.up]: (scrollDir === 'up')},  {[styles.down]: (scrollDir === 'down')})}>
 			<div>
-				<Logo/>
 				<Burger/>
+				<Logo/>
 			</div>
 			<Search/>
 		</header>

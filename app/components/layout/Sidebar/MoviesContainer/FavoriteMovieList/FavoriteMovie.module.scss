@@ -4,7 +4,8 @@
 .auth {
 	margin-top: 44px;
 	padding: 12px 20px;
-	border-radius: 0.5rem/* 8px */;
+	border-radius: 8px;
+	background-color: $gray-color-700;
 	color: $white-color;
 
 	@include desktopM{
@@ -12,7 +13,8 @@
 	}
 }
 
-.movie {
-	height: 7rem/* 112px */;
-	margin-bottom: 1rem/* 16px */;
+.movieLoader {
+	height: 112px;
+	margin-bottom: 16px;
+	background-size: fill;
 }

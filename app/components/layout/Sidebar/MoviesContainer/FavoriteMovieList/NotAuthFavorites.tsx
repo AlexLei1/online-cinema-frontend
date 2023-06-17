@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import styles from './FavoriteMovie.moudule.scss'
+import styles from './FavoriteMovie.module.scss'
 const NotAuthFavorites: FC = () => {
 
 
 
 	return (
-		<div className={styles.favorites}>
+		<div className={styles.auth}>
 			For viewing favorites plz autorize!
 		</div>
 	)

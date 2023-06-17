@@ -6,18 +6,26 @@ import { getGenresListEach } from '@/utils/movie/getGenresList'
 import { getGenreUrl, getMovieUrl } from '@/configs/url.config'
 import styles from './MovieList.module.scss'
 import { IWidgetMovie } from './movie.types'
+import useResize  from '@/hooks/useResize';
+import useActions  from '@/hooks/useActions';
+import { useTypedSelector } from '@/hooks/useTypedSelector';
 
 const MovieItem: FC<{ movie: IWidgetMovie }> = ({ movie }) => {
+	const {isWidth} = useResize()
+	const { toggleBurger } = useActions() 
+	const {isShow} = useTypedSelector(state => state.burger)
+
 	return (
 		<div className={styles.item}>
-
-			
-			
 			<div className={styles.photo}>
 				<Link href={getMovieUrl(movie.slug)}>
+					{isWidth ? 
 					<div>
 						<img src={movie.poster}  alt={movie.title} />
-					</div>
+					</div> : 
+					<div onClick={() => toggleBurger({isShow})}>
+						<img src={movie.poster}  alt={movie.title} />
+					</div>}
 				</Link>
 			</div>
 
@@ -27,7 +35,8 @@ const MovieItem: FC<{ movie: IWidgetMovie }> = ({ movie }) => {
 					<div className={styles.genres}>
 						{movie.genres.map(({ slug, name, _id }, idx) => (
 							<Link key={_id} href={getGenreUrl(slug)}>
-								<a>{getGenresListEach(idx, movie.genres.length, name)}</a>
+								{isWidth ? <a>{getGenresListEach(idx, movie.genres.length, name)}</a> : 
+								<a onClick={() => toggleBurger({isShow})}>{getGenresListEach(idx, movie.genres.length, name)}</a>}
 							</Link>
 						))}
 					</div>
@@ -37,7 +46,6 @@ const MovieItem: FC<{ movie: IWidgetMovie }> = ({ movie }) => {
 					<span>{movie.rating.toFixed(1)}</span>
 				</div>
 			</div>
-			
 		</div>
 	)
 }

@@ -10,7 +10,7 @@
 	z-index: 1000;
 	background-color: $gray-color-900;
 	backdrop-filter: blur(5px);
-	padding: 10px 23px;
+	padding: 10px 40px;
 	transition: $transition;
 
 	> div {
@@ -21,6 +21,9 @@
 		> :last-child {
 			margin-left: 25px;
 		}
+	}
+	@include desktopM {
+		padding: 10px 23px;
 	}
 }
 

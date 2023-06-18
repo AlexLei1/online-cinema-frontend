@@ -27,7 +27,7 @@ const SearchList: FC<{ movies: IWidgetMovie[] }> = ({ movies }) => {
 					</Link>
 				))
 			) : (
-				<div className="text-white text-center my-4">Movies not found!</div>
+				<div className={styles.listNot}>Movies not found!</div>
 			)}
 		</div>
 	)

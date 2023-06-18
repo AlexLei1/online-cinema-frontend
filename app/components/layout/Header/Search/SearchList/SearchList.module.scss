@@ -1,11 +1,15 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .list {
 	position: absolute;
 	border: 1px;
-	border-color: var(--gray-color-700);
+	border-color: $gray-color-700;
 	border-radius: 12px;
-	background-color: var(--gray-color-800);
+	background-color: $gray-color-800;
 	width: 100%;
 	top: calc(100% + 15px);
+	right: 0;
 	animation: fade .5s ease-in-out;
 	z-index: 10;
 
@@ -14,7 +18,8 @@
 		align-items: center;
 		padding: 12px 16px;
 		position: relative;
-
+		color: white;
+		
 		&::after {
 			right: 2px;
 			width: 2px;
@@ -27,7 +32,7 @@
 		}
 
 		&:hover::after {
-			background-color: var(--primary-color);
+			background-color: $primary-color;
 			height: 60%;
 		}
 
@@ -37,19 +42,27 @@
 
 		> span {
 			margin-left: 12px;
-			color: white;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
 
 			&:last-child {
-				width: 70%;
+				width: 100%;
 			}
+		}
+		@include desktopM {
+			padding: 5px 10px;
+			font-size: $fz-sm;
 		}
 	}
 }
 
-
+.listNot {
+	color: $white-color;
+	text-align: center;
+	margin-top: 16px;
+  margin-bottom: 16px;
+}
 @keyframes fade {
   from {
     opacity: 0;

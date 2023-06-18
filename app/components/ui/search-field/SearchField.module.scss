@@ -1,20 +1,18 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .search {
 	display: flex;
 	align-items: center;
+	border: 1px solid $gray-color-700;
 	max-width: 220px;
-	border: 1px solid var(--gray-color-700);
 	border-radius: 50px;
-	padding: 8px 12px;
+	padding: 8px 8px;
 	transition: all ease-in-out .2s;
 
 	@media(max-width: 1200px) {
 		max-width: 150px;
-		padding: 4px 6px;	
-	}
-
-	@media(max-width: 768px) {
-		max-width: 150px;
-		padding: 4px 6px;	
+		padding: 6px 6px;	
 	}
 
 	> svg {
@@ -25,11 +23,6 @@
 		transition: all ease-in-out .2s;
 
 		@media(max-width: 1200px) {
-			margin-right: 8px;
-			font-size: 20px;
-		}
-
-		@media(max-width: 768px) {
 			margin-right: 8px;
 			font-size: 20px;
 		}
@@ -45,24 +38,24 @@
 		
 
 		&::placeholder {
-			color: var(--gray-color-600);
+			color: $gray-color-600;
 		}
 
 		@media(max-width: 1200px) {
-			font-size: 12px;
+			font-size: $fz-sm;
 		}
-
-		@media(max-width: 768px) {
-			font-size: 12px;
-		}
-	
 	}
 
 	&:focus-within {
-		border-color: var(--gray-color-600);
+		border-color: $gray-color-600;
 
 		> svg {
 			fill: #999AA5;
 		}
 	}
+
+	:hover {
+		max-width: 220px;
+	}
 }
+

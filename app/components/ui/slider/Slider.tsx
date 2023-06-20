@@ -17,25 +17,22 @@ const Slider: FC<ISlider> = ({ buttonTitle, slides }) => {
 
 	return (
 		<div className={styles.slider}>
-
-			{isPrev && (
-				<Arrow variant="left" clickHandler={() => handleClick('prev')} />
-			)}
-			
 			<CSSTransition
 				in={slideIn}
 				timeout={300}
 				classNames="slide-animation"
-				unmountOnExit
-			>
-				<SlideItem slide={slides[index]} buttonTitle={buttonTitle} />
+				unmountOnExit>
+					<SlideItem slide={slides[index]} buttonTitle={buttonTitle} />
 			</CSSTransition>
 
-		
-		
-			{isNext && (
-				<Arrow variant="right" clickHandler={() => handleClick('next')} />
-			)}
+				{isPrev && (
+					<Arrow variant="leftSlider" clickHandler={() => handleClick('prev')} />
+				)}
+				
+				{isNext && (
+					<Arrow variant="rightSlider" clickHandler={() => handleClick('next')} />
+				)}
+
 		</div>
 	)
 }

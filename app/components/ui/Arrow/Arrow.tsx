@@ -6,27 +6,24 @@ import { MaterialIcon } from '../icons/MaterialIcon'
 import styles from './Arrow.module.scss'
 
 interface IArrow {
-	variant: 'left' | 'right'
+	variant: 'left' | 'leftSlider' |'right' | 'rightSlider'
 	clickHandler?: () => void
 	onClick?: () => void 
-	rest?: {};
+	// rest?: {};
 }
 
 const Arrow: FC<IArrow> = ({ clickHandler, onClick, ...rest}) => {
 	const isLeft = rest.variant === 'left'
+	const isLeftSlider = rest.variant === 'leftSlider'
 	const click = onClick || clickHandler
-
 
 	return (
 		<button
 			id={rest.variant}
 			onClick={click}
-			className={cn(styles.arrow, {
-				[styles.left]: isLeft,
-				[styles.right]: !isLeft,
-			})}
+			className={styles.arrow}
 		>
-			<MaterialIcon name={isLeft ? 'MdChevronLeft' : 'MdChevronRight'} />
+			<MaterialIcon name={isLeft || isLeftSlider ? 'MdChevronLeft' : 'MdChevronRight'} />
 		</button>
 	)
 }

@@ -1,17 +1,20 @@
-@import 'app/assets/styles/mixins';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 
 
 
-.containerClass {
-	#left {
-		left: calc(4% + 1px);
-	}
+
+// .containerClass {
 	
-	#right {
-		right: calc(4% + 1px);
-	};
-}
+// 	// #left {
+// 	// 	left: calc(4% + 1px);
+// 	// }
+	
+// 	// #right {
+// 	// 	right: calc(4% + 1px);
+// 	// };
+// }
 
 .item {
 	position: relative;

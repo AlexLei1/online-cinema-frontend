@@ -12,7 +12,6 @@ const Admin: FC = () => {
 		<Meta title="Admin panel">
 			<AdminNavigation />
 			<Heading title="Some statistics" />
-
 			<Statistics />
 		</Meta>
 	)

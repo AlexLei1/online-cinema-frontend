@@ -136,13 +136,25 @@ input:focus {
 }
 
 /* Arrow */
+
 #left {
 	left: calc(4% + 1px);
+}
+
+#leftSlider {
+	left: calc(80% + 1px);
+	top: calc(80% + 1px);
 }
 
 #right {
 	right: calc(4% + 1px);
 }
+
+#rightSlider {
+	right: calc(4% + 1px);
+	top: calc(80% + 1px);
+}
+
 
 .wrapper {
 	margin: 0px auto;

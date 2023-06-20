@@ -4,19 +4,10 @@
 	position: relative;
 	width: 100%;
 
-	button {
-		bottom: 32px;
-	}
-	button:first-child {
-		right: 96px;
-	}
-	button:last-child {
-		right: 32px;
-	}
-
 
 	.slide {
 		position: relative;
+
 		height: 320px;
 		border-radius: 24px;
 		overflow: hidden;
@@ -24,7 +15,6 @@
 		align-items: flex-end;
 		display: flex;
 	
-
 		@include fade-bg-gradient();
 
 		.image {
@@ -157,40 +147,41 @@
 		}
 	}
 
-	@media (max-width: 480px){
-		button {
-		bottom: 32px;
-	}
 
-		button:first-child {
-			right: 60px;
-		}
+	// @media (max-width: 480px){
+	// 	button {
+	// 	bottom: 32px;
+	// }
+
+	// 	button:first-child {
+	// 		right: 60px;
+	// 	}
 	
-		button:last-child {
-			right: 30px;
-		}
-	}
+	// 	button:last-child {
+	// 		right: 30px;
+	// 	}
+	// }
 
-	@media (max-width: 320px){
-		button {
-			bottom: 32px;
-		}
+	// @media (max-width: 320px){
+	// 	button {
+	// 		bottom: 32px;
+	// 	}
 
-		button:first-child {
-			right: 35px;
-		}
+	// 	button:first-child {
+	// 		right: 35px;
+	// 	}
 	
-		button:last-child {
-			right: 10px;
-		}
-	}
+	// 	button:last-child {
+	// 		right: 10px;
+	// 	}
+	// }
 
-	@media (max-width: 992px){	
-		bottom: 25px;
-	}
-	@media (max-width: 768px){
-		bottom: 20px;
-	}
+	// @media (max-width: 992px){	
+	// 	bottom: 25px;
+	// }
+	// @media (max-width: 768px){
+	// 	bottom: 20px;
+	// }
 	
 }
 

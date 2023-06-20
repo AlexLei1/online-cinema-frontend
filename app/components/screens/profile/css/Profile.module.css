@@ -1,0 +1,6 @@
+.form {
+  @apply w-1/2 mt-12;
+}
+.form > button {
+  @apply mt-5;
+}

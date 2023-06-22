@@ -1,8 +1,5 @@
 import { FC } from 'react'
-import cn from 'classnames'
-
 import { MaterialIcon } from '../icons/MaterialIcon'
-
 import styles from './Arrow.module.scss'
 
 interface IArrow {

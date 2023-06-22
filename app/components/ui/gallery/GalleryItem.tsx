@@ -2,7 +2,6 @@ import cn from 'classnames'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-
 import styles from './Gallery.module.scss'
 import { IGalleryItemProps } from './gallery.types'
 

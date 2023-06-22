@@ -2,7 +2,6 @@ import { FC } from 'react'
 import Carousel from 'react-multi-carousel'
 import { IGalleryItem } from './gallery.types'
 import GalleryItem from './GalleryItem'
-import styles from './Gallery.module.scss'
 import 'react-multi-carousel/lib/styles.css'
 import Arrow from './../Arrow/Arrow';
 
@@ -16,20 +15,20 @@ const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 			items: 6,
 		},
 		desktop: {
-			breakpoint: { max: 1200, min: 992 },
+			breakpoint: { max: 1200, min: 900 },
 			items: 5,
 		},
 		tablet: {
-			breakpoint: { max: 992, min: 768 },
+			breakpoint: { max: 900, min: 768 },
 			items: 4,
 		},
 		mobile: {
 			breakpoint: { max: 768, min: 480 },
-			items: 3,
+			items: 4,
 		},
 		mobileSmall: {
-			breakpoint: { max: 480, min: 320 },
-			items: 3,
+			breakpoint: { max: 480, min: 330 },
+			items: 4,
 		}
 	};
 
@@ -37,7 +36,6 @@ const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 		<Carousel  
 			responsive={responsive}
 			ssr={true}
-			containerClass={styles.containerClass}
 			customLeftArrow={<Arrow variant='left'/>}
 			customRightArrow={<Arrow variant='right'/>}
 		>

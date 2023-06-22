@@ -2,25 +2,11 @@
 @import 'assets/styles/mixins';
 
 
-
-
-
-// .containerClass {
-	
-// 	// #left {
-// 	// 	left: calc(4% + 1px);
-// 	// }
-	
-// 	// #right {
-// 	// 	right: calc(4% + 1px);
-// 	// };
-// }
-
 .item {
 	position: relative;
 	display: flex;
 	align-items: flex-end;
-	border-radius:12px;
+	border-radius: 12px;
 	overflow: hidden;
 	margin: 8px;
 	transition: all ease-in-out .2s;
@@ -64,7 +50,7 @@
 
 	img {
 		object-position: center;
-		object-fit: cover;
+		object-fit: contain;
 		pointer-events: none;
 	}
 
@@ -85,22 +71,6 @@
 		.subTitle {
 			color: rgb(153 154 165 / 1);
 			text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-		}
-
-		@media (max-width: 1200px){
-			
-		}
-		@media (max-width: 992px){	
-			
-		}
-		@media (max-width: 768px){
-			
-		}
-		@media (max-width: 480px){
-			
-		}
-		@media (max-width: 320px){
-			
 		}
 	}
 }

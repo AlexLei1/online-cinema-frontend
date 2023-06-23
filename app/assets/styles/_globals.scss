@@ -41,25 +41,32 @@ body {
 }
 
 section {
-	padding: 40px 0px 40px 0px;
+	margin: 40px 0px 40px 0px;
+	padding-bottom: 40px;
+	
 	@include desktopM {
-		padding: 35px 0px 35px 0px;
+		margin: 35px 0px 35px 0px;
+		padding-bottom: 35px;
 	}
 
 	@include desktopXS {
-		padding: 30px 0px 30px 0px;
+		margin: 30px 0px 30px 0px;
+		padding-bottom: 30px;
 	}
 
 	@include tabletL {
-		padding: 25px 0px 25px 0px;
+		margin: 25px 0px 25px 0px;
+		padding-bottom: 25px;
 	}
 
 	@include mobileL {
-		padding: 20px 0px 20px 0px;
+		margin: 20px 0px 20px 0px;
+		padding-bottom: 20px;
 	}
 
 	@include mobileS {
-		padding: 15px 0px 15px 0px;
+		margin: 15px 0px 15px 0px;
+		padding-bottom: 15px;
 	}
 }
 
@@ -176,3 +183,15 @@ input:focus {
 	}
 }
 
+// carousel
+
+.react-multi-carousel-list {
+
+	> .react-multi-carousel-track {
+		gap: 15px;
+		
+		> .react-multi-carousel-item {
+			
+		}
+	}
+}

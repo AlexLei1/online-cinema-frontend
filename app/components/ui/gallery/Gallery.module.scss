@@ -6,32 +6,25 @@
 	position: relative;
 	display: flex;
 	align-items: flex-end;
-	border-radius: 12px;
-	overflow: hidden;
-	margin: 8px;
+
+	overflow: auto;
 	transition: all ease-in-out .2s;
 	width: 100%;
 
 	&:hover {
-		transform: translateY(-5px);
+		transform: scale(1.03);
 	}
 
 	&.vertical {
 		height: 250px;
 
-		@media (max-width: 1200px){
-			height: 250px;
+		@include tabletL{
+			height: 200px
 		}
-		@media (max-width: 992px){	
-			height: 250px;
+		@include mobileL{
+			height: 150px;
 		}
-		@media (max-width: 768px){
-			height: 250px
-		}
-		@media (max-width: 480px){
-			height: 200px;
-		}
-		@media (max-width: 320px){
+		@include mobileS{
 			height: 100px;
 		}
 	}
@@ -43,14 +36,11 @@
 
 	&.withText {
 		@include fade-bg-gradient(0deg);
-		&::before {
-			border-radius: 12px;
-		}
 	}
 
 	img {
 		object-position: center;
-		object-fit: contain;
+		object-fit: cover;
 		pointer-events: none;
 	}
 
@@ -58,10 +48,11 @@
 		position: relative;
 		z-index: 2;
 		text-align: center;
-		margin: 12px;
+		margin: clamp(6px, 2vw, 12px) ;
 		width: 100%;
 
 		.title {
+			font-size: clamp(10px, 2vw, 16px);
 			font-weight: 600;
 			margin-bottom: 4px;
 			color: white;
@@ -69,6 +60,7 @@
 		}
 
 		.subTitle {
+			font-size: clamp(10px , 2vw, 16px);
 			color: rgb(153 154 165 / 1);
 			text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 		}

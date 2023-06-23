@@ -10,23 +10,27 @@ import Arrow from './../Arrow/Arrow';
 const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 	
 	const responsive: any = {
-		desktopBig: {
-			breakpoint: { max: 4000, min: 1200 },
+		desktopL: {
+			breakpoint: { max: 4000, min: 1400 },
 			items: 6,
 		},
-		desktop: {
+		desktopM: {
+			breakpoint: { max: 1400, min: 1200 },
+			items: 4,
+		},
+		desktopXS: {
 			breakpoint: { max: 1200, min: 900 },
+			items: 6,
+		},
+		tabletL: {
+			breakpoint: { max: 900, min: 768 },
+			items: 6,
+		},
+		mobileL: {
+			breakpoint: { max: 768, min: 480 },
 			items: 5,
 		},
-		tablet: {
-			breakpoint: { max: 900, min: 768 },
-			items: 4,
-		},
-		mobile: {
-			breakpoint: { max: 768, min: 480 },
-			items: 4,
-		},
-		mobileSmall: {
+		mobileS: {
 			breakpoint: { max: 480, min: 330 },
 			items: 4,
 		}

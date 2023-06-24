@@ -29,7 +29,6 @@ const Auth: FC = () => {
 	const onSubmit: SubmitHandler<IAuthInput> = (data) => {
 		if (type === 'login') login(data)
 		else if (type === 'register') register(data)
-
 		reset()
 	}
 

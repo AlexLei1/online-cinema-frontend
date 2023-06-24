@@ -1,61 +1,131 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .button {
-	@apply btn-primary py-2 px-10;
+	background-color: $primary-color;
+  color: #fff;
+  border-radius: 10px;
+  transition: $transition;
+	padding: 8px 40px;
+
+	&:hover {
+		background-color: red;
+	}
 }
 
 .common {
-	@apply relative border-b border-gray-600 transition-colors focus-within:border-primary;
+	position: relative;
+	border-bottom-width: 1px;
+	border-color: $gray-color-600;
+	transition: $transition;
+
+	&:focus-within {
+		border-color: $primary-color;
+	}
 
 	> label {
-		@apply block;
+		display: block;
 
 		> span {
-			@apply text-xs uppercase text-gray-600 block;
+			font-size: 0.75rem/* 12px */;
+  		line-height: 1rem/* 16px */;
+			text-transform: uppercase;
+			color: $gray-color-600;
+			display: block;
 		}
 	}
 }
 
 .field {
-	@apply text-left mb-8;
-
+	text-align: left;
+	margin-bottom: 2rem/* 32px */;
 	input {
 		@apply outline-border-none focus:ring-0 bg-transparent text-gray-500 w-full m-0 px-0;
+		outline: none;
+  	border: none;
+		background-color: transparent;
+		color: $gray-color-500;
+		width: 100%;
+		margin: 0px;
+		padding-left: 0px;
+  	padding-right: 0px;
+
+		&:focus {
+
+		}
 	}
 }
 
 .uploadField {
-	@apply relative;
+	position: relative;
 	.uploadFlex {
-		@apply flex;
+		display: flex;
 
 		> .uploadImageContainer {
-			@apply shrink-0 relative w-24 h-24;
+			flex-shrink: 0;
+			position: relative;
+			width: 6rem/* 96px */;
+			height: 6rem/* 96px */;
 
 			img {
-				@apply image-like-bg rounded-md;
+				object-position: center;
+				object-fit: cover;
+				pointer-events: none;
+				border-radius: 0.375rem/* 6px */;
 			}
 
 			> span {
-				@apply animate-fade;
+				animation: fade .5s ease-in-out;
 			}
 		}
 
 		> label {
-			@apply block mr-6;
+			display: block;
+			margin-right: 1.5rem/* 24px */;
 
 			.error {
-				@apply relative -bottom-3;
+				position: relative;
+				bottom: -0.75rem/* -12px */;
 			}
 
 			> span {
-				@apply text-xs uppercase text-gray-600 block mb-4;
+				font-size: 0.75rem/* 12px */;
+				line-height: 1rem/* 16px */;
+				text-transform: uppercase;
+				color: $gray-color-600;
+				display: block;
+				margin-bottom: 1rem/* 16px */;
+
 			}
 
 			> input {
 				@apply block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary opacity-70 file:text-white transition-opacity;
+				display: block;
+				width: 100%;
+				font-size: 0.875rem/* 14px */;
+				line-height: 1.25rem/* 20px */;
+				color: $gray-color-600;
+				opacity: 0.7;
+				color: $white-color;
+				transition: $transition;
+
+				&::file-selector-button {
+					margin-right: 1rem/* 16px */;
+					padding-top: 0.5rem/* 8px */;
+					padding-bottom: 0.5rem/* 8px */;
+					padding-left: 1rem/* 16px */;
+					padding-right: 1rem/* 16px */;
+					border-radius: 9999px;
+					border-width: 0px;
+					font-size: 0.875rem/* 14px */;
+					line-height: 1.25rem/* 20px */;
+					font-weight: 600;
+					background-color: $primary-color;
+				}
 			}
 
 			&:hover > input {
-				@apply opacity-100;
+				opacity: 1;
 			}
 		}
 	}
@@ -63,26 +133,62 @@
 
 .error {
 	@apply absolute -bottom-6 left-0 text-sm w-full text-primary;
+	position: absolute;
+	bottom: -1.5rem/* -24px */;
+	left: 0px;
+	font-size: 0.875rem/* 14px */;
+  line-height: 1.25rem/* 20px */;
+	width: 100%;
+	color: red;
 }
 
 .editorWrapper {
-	@apply border-0;
+	border-width: 0px;
 
 	.wrapper {
 		.toolbar {
-			@apply mt-4 outline-border-none rounded-t-lg mb-0 bg-gray-600 bg-opacity-40 p-3;
+			margin-top: 1rem/* 16px */;
+			outline: none;
+  		border: none;
+			border-top-left-radius: 0.5rem/* 8px */;
+  		border-top-right-radius: 0.5rem/* 8px */;
+			margin-bottom: 0px;
+			background-color: $gray-color-600;
+			--tw-bg-opacity: 0.4;
+			padding: 0.75rem/* 12px */;
 
 			> div {
-				@apply m-0;
+				margin: 0px;
 
 				> div {
 					@apply outline-border-none shadow-none transition-colors border-gray-500 bg-gray-500 hover:bg-gray-300 mx-1.5;
+					outline: none;
+					border: none;
+					transition: $transition;
+					border-color: $gray-color-500;
+					background-color: $gray-color-500;
+					margin-left: 0.375rem/* 6px */;
+					margin-right: 0.375rem/* 6px */;
+
+					&:hover {
+						background-color: $gray-color-300;
+					}
+
 				}
 			}
 		}
 
 		.editor {
-			@apply h-96 border rounded-b-lg border-gray-700 px-4 text-gray-500 overflow-hidden;
+			height: 24rem/* 384px */;
+			border-width: 1px;
+			border-bottom-right-radius: 0.5rem/* 8px */;
+			border-bottom-left-radius: 0.5rem/* 8px */;
+			border-color: $gray-color-700;
+			padding-left: 1rem/* 16px */;
+  		padding-right: 1rem/* 16px */;
+			color: $gray-color-500;
+			overflow: hidden;
+
 		}
 	}
 }

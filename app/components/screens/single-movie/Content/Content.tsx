@@ -1,13 +1,8 @@
 import { FC } from 'react'
-
 import { MaterialIcon } from '@/components/ui/icons/MaterialIcon'
-
 import { IMovie } from '@/shared/types/movie.types'
-
 import { getActorUrl, getGenreUrl } from '@/configs/url.config'
-
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
-
 import styles from './Content.module.scss'
 import ContentList from './ContentList/ContentList'
 

@@ -2,7 +2,45 @@
 
 
 .banner {
-	@apply relative overflow-hidden w-full h-80 rounded-layout shadow-lg flex flex-col justify-end;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 320px;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	
 
 	@include fade-bg-gradient();
+
+	@include desktopL{
+		height: 250px;
+		border-radius: 20px;
+	}
+	@include desktopM{
+		height: 300px;
+		border-radius: 20px;
+	}
+	@include desktopXS{
+		height: 250px;
+		border-radius: 15px;
+		box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.68);
+	}	
+	@include tabletL{	
+		height: 200px;
+		border-radius: 15px;
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.68);
+	}
+	@include mobileL{
+		height: 150px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.68);
+	}
+	@include mobileS{
+		height: 100px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.68);
+	}
 }

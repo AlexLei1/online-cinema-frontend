@@ -118,16 +118,14 @@
 			}
 		}
 
-		// 1400 1200 900 768 600 480 330
+
 		@include desktopL{
 			height: 250px;
 			border-radius: 20px;
-			box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.68);
 		}
 		@include desktopM{
 			height: 300px;
 			border-radius: 20px;
-			box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.68);
 		}
 		@include desktopXS{
 			height: 250px;

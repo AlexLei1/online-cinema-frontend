@@ -1,5 +1,7 @@
 .content {
-	@apply relative z-2 p-8;
+	position: relative;
+	z-index: 2;
+	padding: 32px;
 
 	> h1 {
 		@apply text-white uppercase text-5xl font-semibold mb-1 text-shadow;

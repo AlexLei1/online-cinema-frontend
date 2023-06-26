@@ -169,7 +169,11 @@ input:focus {
 	max-width: 1680px;
 	min-height: 100vh;
 	transition: $transition;
-	padding: 0px 15px;
+	padding: 0px 50px;
+	
+	@include tabletL {
+		padding: 0px 15px;
+	}
 }
 
 .menuOpen {

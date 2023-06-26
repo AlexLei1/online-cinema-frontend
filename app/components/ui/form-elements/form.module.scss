@@ -7,16 +7,21 @@
   border-radius: 10px;
   transition: $transition;
 	padding: 8px 40px;
+	opacity: .5;
 
 	&:hover {
-		background-color: red;
+		opacity: 1;
+	}
+
+	@include tabletL {
+		padding: 6px 15px;
 	}
 }
 
 .common {
 	position: relative;
 	border-bottom-width: 1px;
-	border-color: $gray-color-600;
+	border-color: $gray-color-300;
 	transition: $transition;
 
 	&:focus-within {
@@ -27,8 +32,8 @@
 		display: block;
 
 		> span {
-			font-size: 0.75rem/* 12px */;
-  		line-height: 1rem/* 16px */;
+			font-size: 12px;
+  		line-height: 16px;
 			text-transform: uppercase;
 			color: $gray-color-600;
 			display: block;
@@ -38,21 +43,33 @@
 
 .field {
 	text-align: left;
-	margin-bottom: 2rem/* 32px */;
+	margin-bottom: 32px;
+	position: relative;
+
 	input {
-		@apply outline-border-none focus:ring-0 bg-transparent text-gray-500 w-full m-0 px-0;
 		outline: none;
-  	border: none;
+		border: none;
+		border-bottom: 1px solid white;
+		border-color: $gray-color-700;
 		background-color: transparent;
 		color: $gray-color-500;
 		width: 100%;
 		margin: 0px;
-		padding-left: 0px;
-  	padding-right: 0px;
 
 		&:focus {
-
+			background-color: transparent;
+			border-color: $primary-color;
 		}
+	}
+
+	>.error {
+		position: absolute;
+		bottom: -24px;
+		left: 0px;
+		font-size: $fz-sm;
+		line-height: 20px;
+		width: 100%;
+		color: red;
 	}
 }
 
@@ -64,8 +81,8 @@
 		> .uploadImageContainer {
 			flex-shrink: 0;
 			position: relative;
-			width: 6rem/* 96px */;
-			height: 6rem/* 96px */;
+			width: 96px;
+			height: 96px;
 
 			img {
 				object-position: center;
@@ -81,44 +98,40 @@
 
 		> label {
 			display: block;
-			margin-right: 1.5rem/* 24px */;
+			margin-right: 24px;
 
 			.error {
 				position: relative;
-				bottom: -0.75rem/* -12px */;
+				bottom: -12px;
 			}
 
 			> span {
-				font-size: 0.75rem/* 12px */;
-				line-height: 1rem/* 16px */;
+				font-size: $fz-xxs;
+				line-height: 16px;
 				text-transform: uppercase;
 				color: $gray-color-600;
 				display: block;
-				margin-bottom: 1rem/* 16px */;
+				margin-bottom: 16;
 
 			}
 
 			> input {
-				@apply block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary opacity-70 file:text-white transition-opacity;
 				display: block;
 				width: 100%;
-				font-size: 0.875rem/* 14px */;
-				line-height: 1.25rem/* 20px */;
+				font-size: $fz-sm;
+				line-height: 20px;
 				color: $gray-color-600;
 				opacity: 0.7;
 				color: $white-color;
 				transition: $transition;
 
-				&::file-selector-button {
-					margin-right: 1rem/* 16px */;
-					padding-top: 0.5rem/* 8px */;
-					padding-bottom: 0.5rem/* 8px */;
-					padding-left: 1rem/* 16px */;
-					padding-right: 1rem/* 16px */;
+				&:file-selector-button {
+					margin-right: 16px;
+					padding: 8px 16px;
 					border-radius: 9999px;
 					border-width: 0px;
-					font-size: 0.875rem/* 14px */;
-					line-height: 1.25rem/* 20px */;
+					font-size: $fz-sm;
+					line-height: 20px;
 					font-weight: 600;
 					background-color: $primary-color;
 				}
@@ -131,31 +144,30 @@
 	}
 }
 
-.error {
-	@apply absolute -bottom-6 left-0 text-sm w-full text-primary;
-	position: absolute;
-	bottom: -1.5rem/* -24px */;
-	left: 0px;
-	font-size: 0.875rem/* 14px */;
-  line-height: 1.25rem/* 20px */;
-	width: 100%;
-	color: red;
-}
+// .error {
+// 	position: absolute;
+// 	bottom: -24px;
+// 	left: 0px;
+// 	font-size: 14px;
+//   line-height: 20px;
+// 	width: 100%;
+// 	color: red;
+// }
 
 .editorWrapper {
 	border-width: 0px;
 
 	.wrapper {
 		.toolbar {
-			margin-top: 1rem/* 16px */;
+			margin-top: 16px;
 			outline: none;
   		border: none;
-			border-top-left-radius: 0.5rem/* 8px */;
-  		border-top-right-radius: 0.5rem/* 8px */;
+			border-top-left-radius: 8px;
+  		border-top-right-radius: 8px;
 			margin-bottom: 0px;
 			background-color: $gray-color-600;
 			--tw-bg-opacity: 0.4;
-			padding: 0.75rem/* 12px */;
+			padding: 12px;
 
 			> div {
 				margin: 0px;
@@ -167,25 +179,24 @@
 					transition: $transition;
 					border-color: $gray-color-500;
 					background-color: $gray-color-500;
-					margin-left: 0.375rem/* 6px */;
-					margin-right: 0.375rem/* 6px */;
+					margin-left: 6px;
+					margin-right: 6px;
 
 					&:hover {
 						background-color: $gray-color-300;
 					}
-
 				}
 			}
 		}
 
 		.editor {
-			height: 24rem/* 384px */;
+			height: 384px;
 			border-width: 1px;
-			border-bottom-right-radius: 0.5rem/* 8px */;
-			border-bottom-left-radius: 0.5rem/* 8px */;
+			border-bottom-right-radius: 8px;
+			border-bottom-left-radius: 8px;
 			border-color: $gray-color-700;
-			padding-left: 1rem/* 16px */;
-  		padding-right: 1rem/* 16px */;
+			padding-left: 16px;
+  		padding-right: 16px;
 			color: $gray-color-500;
 			overflow: hidden;
 

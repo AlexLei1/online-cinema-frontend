@@ -38,14 +38,13 @@
  
 				@include tabletL{
 					font-size: 40px;
-					margin-bottom: 4px;
 				}
 				@include mobileL{
-					font-size: 30px;
+					font-size: 35px;
 					margin-bottom: 3px;
 				}
 				@include mobileS{
-					font-size: 18px;
+					font-size: 30px;
 					margin-bottom: 2px;
 				}
 			}
@@ -61,15 +60,15 @@
 				
 				@include tabletL{
 					margin-bottom: 10px;
-					font-size: 13px;
+					font-size: 14px;
 				}
 				@include mobileL{
 					margin-bottom: 6px;
-					font-size: 10px;
+					font-size: 13px;
 				}
 				@include mobileS{
 					margin-bottom: 2px;
-					font-size: 8px;
+					font-size: 12px;
 				}
 			}
 

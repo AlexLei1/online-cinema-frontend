@@ -1,14 +1,43 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .list {
-	@apply flex items-center mb-1;
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+
 
 	> .name {
-		@apply mr-2 text-white text-opacity-60;
+		margin-right: 8px;
+		color: $white-color;
+		opacity: .6;
 	}
 
 	> .links {
-		@apply text-white text-opacity-90;
+		color: $white-color;
+		opacity: .9;
+
 		> a {
-			@apply text-link;
+			text-underline-offset: 4px;
+			color: rgba(255, 255, 255, .9);
+			transition: $transition;
+			text-decoration-line: underline;
+			text-decoration-color: rgba(255, 255, 255, 0.2);
+			&:hover {
+				text-decoration-color: rgba(255, 255, 255, 0.9);
+			}
 		}
+	}
+	@include tabletL{
+		font-size: $fz-sm;
+		margin-bottom: 6px;
+	}
+	@include mobileL{
+		font-size: $fz-xs;
+		margin-bottom: 0px;
+	}
+	@include mobileS{
+		font-size: $fz-xxs;
+		margin-bottom: none;
 	}
 }

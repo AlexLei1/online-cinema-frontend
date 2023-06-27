@@ -1,25 +1,99 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .content {
 	position: relative;
 	z-index: 2;
 	padding: 32px;
 
 	> h1 {
-		@apply text-white uppercase text-5xl font-semibold mb-1 text-shadow;
+		color: $white-color;
+		text-transform: uppercase;
+		font-size: 48px;
+  	line-height: 1;
+		font-weight: 600;
+		margin-bottom: 4px;
+		text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+
+		@include tabletL{
+			font-size: 40px;
+		}
+		@include mobileL{
+			font-size: 35px;
+			margin-bottom: 3px;
+		}
+		@include mobileS{
+			font-size: 30px;
+			margin-bottom: 2px;
+		}
 	}
 
 	.rating {
-		@apply absolute bottom-8 right-8 flex items-center text-xl opacity-90;
+		position: absolute;
+		bottom: 32px;
+		right: 32px;
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+  	line-height: 28px;
+		opacity: 0.9;
 
 		> svg {
-			@apply fill-yellow-700 mb-0.5;
+			fill: #F5C521;
+			margin-bottom: 2px;
 		}
 
 		> span {
-			@apply text-white ml-2;
+			margin-left: 8px;
+			color: $white-color;
+		}
+
+		@include tabletL{
+			font-size: 18px;
+			right: 25px;
+		}
+		@include mobileL{
+			font-size: 16px;
+			bottom: 20px;
+		}
+		@include mobileS{
+			font-size: 14px;
+			bottom: 10px;
 		}
 	}
 
 	.details {
-		@apply text-white text-opacity-80 my-3;
+		color: $white-color;
+		opacity: 0.8;
+		margin: 12px 0px;
+
+		@include tabletL{
+			margin: 8px 0px;
+			font-size: 14px;
+		}
+		@include mobileL{
+			margin: 6px 0px;
+			font-size: 13px;
+		}
+		@include mobileS{
+			margin: 2px 0px;
+			font-size: 12px;
+		}
+	}
+	
+	@include desktopM{
+		padding: 32px
+	}
+	@include desktopXS{	
+		padding: 25px
+	}
+	@include tabletL{
+		padding: 20px
+	}
+	@include mobileL{
+		padding: 15px
+	}
+	@include mobileS{
+		padding: 10px
 	}
 }

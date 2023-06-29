@@ -13,25 +13,27 @@ const RateMovie: FC<{ slug: string; _id: string }> = ({ slug, _id }) => {
 	const { handleClick, isSended, rating } = useRateMovie(_id)
 
 	return (
-		<div className={styles.wrapper}>
-			<h3>How do you like the movie?</h3>
-			<p>Ratings improve recommendations</p>
-			{user ? (
-				<>
-					{isSended ? (
-						<div className={styles.thanks}>Thanks for rating!</div>
-					) : (
-						<StarRating
-							name="star-rating"
-							value={rating}
-							onStarClick={handleClick}
-							emptyStarColor="#4f4f4f"
-						/>
-					)}
-				</>
-			) : (
-				<AuthButton slug={slug} />
-			)}
+		<div className={styles.container}>
+			<div className={styles.wrapper}>
+				<h3>How do you like the movie?</h3>
+				<p>Ratings improve recommendations</p>
+				{user ? (
+					<>
+						{isSended ? (
+							<div className={styles.thanks}>Thanks for rating!</div>
+						) : (
+							<StarRating
+								name="star-rating"
+								value={rating}
+								onStarClick={handleClick}
+								emptyStarColor="#4f4f4f"
+							/>
+						)}
+					</>
+				) : (
+					<AuthButton slug={slug} />
+				)}
+			</div>
 		</div>
 	)
 }

@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { CSSTransition } from 'react-transition-group'
-
 import Arrow from '../Arrow/Arrow'
 import SlideItem from './SlideItem'
 import styles from './Slider.module.scss'

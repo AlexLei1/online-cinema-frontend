@@ -1,44 +1,150 @@
-.wrapper {
-	@apply mt-12 rounded-2xl overflow-hidden shadow-xl relative animate-fade;
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
-	.controls {
-		@apply flex-center-between absolute bottom-3 left-6 right-6;
+.container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 
-		> div:first-child {
-			@apply flex-center-between;
+	.wrapper {
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+		max-width: 700px;
+		border-radius: 12px;
 
-			> button {
-				@apply text-2xl text-white mr-3 outline-none opacity-60 hover:opacity-100 transition-opacity;
+		.controls {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			bottom: 12px;
+			left: 24px;
+			right: 24px;
+			
+			@include mobileL {
+				bottom: 4px;
+				left: 12px;
+				right: 12px;
 			}
 
-			.playButton {
-				@apply text-4xl;
+			> div:first-child {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				> button {
+					font-size: 24px;
+					line-height: 32px;
+					color: $white-color;
+					margin-right: 12px;
+					outline: 2px solid transparent;
+					outline-offset: 2px;
+					opacity: 0.6;
+					transition: $transition;
+	
+					&:hover {
+						opacity: 1;
+					}
+
+					@include mobileL {
+						font-size: 25px;
+						margin-right: 5px;
+					}
+				}
+	
+				.playButton {
+					font-size: 36px;
+					line-height: 40px;
+
+					@include mobileL {
+						font-size: 26px;
+					}
+				}
+	
+				.timeControls {
+					display: flex;
+					align-items: center;
+					color:$white-color;
+					margin-left: 16px;
+					opacity: 0.6;
+					
+					@include mobileL {
+						margin-left: 10px;
+						font-size: 14px;
+					}
+					> p:nth-child(2) {
+						margin-left: 8px;
+						margin-right: 8px;
+
+						@include mobileL {
+							margin-left: 4px;
+							margin-right: 4px;
+						}
+					}
+
+				}
+			}
+	
+			> div:last-child {
+				display: flex;
+				align-items: center;
+	
+				> button {
+					color:$white-color;
+					font-size: 30px;
+					line-height: 36px;
+					outline: 2px solid transparent;
+					outline-offset: 2px;
+					opacity: 0.6;
+					transition: $transition;
+					
+					@include mobileL {
+						font-size: 25px;	
+					}
+
+					&:hover {
+						opacity: 1;
+					}
+					
+				}
 			}
 
-			.timeControls {
-				@apply flex items-center text-white ml-4 opacity-60;
+		
+		}
 
-				> p:nth-child(2) {
-					@apply mx-2;
+		
+	
+		.progressBarContainer {
+			position: absolute;
+			left: 16px;
+			right: 16px;
+			bottom: 56px;
+			background-color: $gray-color-600;
+			border-radius: 12px;
+			height: 4px;
+			width: calc(100% - 2rem);
+
+			@include mobileL {
+				left: 10px;
+				right: 10px;
+				bottom: 36px;
+			}
+	
+			.progressBar {
+				border-radius: 16px;
+				height: 100%;
+				background-color: $primary-color;
+
+				@include mobileL {
+					
 				}
 			}
 		}
-
-		> div:last-child {
-			@apply flex items-center;
-
-			> button {
-				@apply text-white text-3xl outline-none opacity-60 hover:opacity-100 transition-opacity;
-			}
-		}
 	}
 
-	.progressBarContainer {
-		@apply absolute left-4 right-4 bottom-14 bg-gray-600 rounded-layout h-1;
-		width: calc(100% - 2rem);
-
-		.progressBar {
-			@apply rounded-2xl h-full bg-primary;
-		}
-	}
 }
+
+

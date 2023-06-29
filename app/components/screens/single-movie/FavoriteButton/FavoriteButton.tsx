@@ -3,7 +3,7 @@ import { FC, useEffect, useState } from 'react'
 import { useMutation } from 'react-query'
 import { UserService } from '@/services/user/user.service'
 import { toastError } from '@/utils/api/withToastrErrorRedux'
-import { useFavorites } from '../../favorites/useFavorites'
+import { useFavorites } from '../../favorites/useFavorites' 
 import styles from './FavoriteButton.module.scss'
 import HeartImage from './heart-animation.png'
 

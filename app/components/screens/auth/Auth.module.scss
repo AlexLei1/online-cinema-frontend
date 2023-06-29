@@ -1,9 +1,6 @@
 @import 'assets/styles/variables';
 @import 'assets/styles/mixins';
 
-
-
-
 .wrapper {
 	margin: 0px;
 	padding: 0px;
@@ -19,14 +16,6 @@
 		color: rgba(255, 255, 255, 0.185);
 		box-shadow: 0 0px 30px 10px $gray-color-950;
 		text-align: center;
-
-		> h1 {
-			padding-top: 40px;
-
-			@include desktopXS {
-				padding: 20px 0px;
-			}
-		}
 
 		.buttons {
 			margin-top: 48px;

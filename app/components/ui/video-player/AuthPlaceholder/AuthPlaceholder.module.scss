@@ -1,15 +1,76 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+
 .placeholder {
-	@apply flex absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-70;
+	position: relative;
+	display: flex;
+	padding: 28px;
+	height: 100%;
+	background-color:$gray-color-950;
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 16px;
+	
+	@include desktopM {
+		padding: 28px;
+	}
+	@include tabletL {
+		padding: 28px;
+	}
+	@include mobileL {
+		padding: 20px;
+	}
+	@include mobileS {
+		padding: 28px;
+	}
 
 	> div {
-		@apply m-auto text-center;
+		margin: auto;
+		text-align: center;
 
 		> div {
-			@apply text-white mb-4 text-lg;
+			color: $white-color;
+			margin-bottom: 16px;
+			font-size: 18px;
+			line-height: 28px;
+
+			@include desktopM {
+
+			}
+			@include tabletL {
+
+			}
+			@include mobileL {
+			
+			}
+			@include mobileS {
+
+			}
 		}
 	}
 }
 
 .btn {
-	@apply btn-primary py-2 px-7 text-lg;
+	background-color: $primary-color;
+	color: #fff;
+	border-radius: 10px;
+	transition: $transition;
+	padding: 8px 28px;
+	font-size: 18px;
+	line-height: 28px;
+
+	@include desktopM {
+
+	}
+	@include tabletL {
+
+	}
+	@include mobileL {
+	
+	}
+	@include mobileS {
+
+	}
+
 }
+

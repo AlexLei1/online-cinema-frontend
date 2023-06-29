@@ -24,21 +24,21 @@ const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
 
 	return (
 		<Meta title={movie.title} description={`Watch ${movie.title}`}>
-			<div className='test'>
-				<Banner
-					imagePath={movie.bigPoster}
-					Detail={() => <Content movie={movie} />}
-				/>
+			<div>
+				<section>
+					<Banner imagePath={movie.bigPoster} Detail={() => <Content movie={movie} />}/>
+				</section>
+				<section>
+					<DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug} />
+				</section>
+				<section>
+					<SubHeading title="Similar" />
+					<Gallery items={similarMovies} />
+				</section>
+				<section>
+					<DynamicRateMovie slug={movie.slug} _id={movie._id} />
+				</section>
 			</div>
-
-			<DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug} />
-
-			<div className="mt-12">
-				<SubHeading title="Similar" />
-				<Gallery items={similarMovies} />
-			</div>
-
-			<DynamicRateMovie slug={movie.slug} _id={movie._id} />
 		</Meta>
 	)
 }

@@ -1,9 +1,7 @@
 import styles from './VideoPlayer.module.scss'
 import cn from 'classnames'
 import { FC } from 'react'
-
 import { useAuth } from '@/hooks/useAuth'
-
 import { MaterialIcon } from '../icons/MaterialIcon'
 import AuthPlaceholder from './AuthPlaceholder/AuthPlaceholder'
 import { useVideo } from './useVideo'
@@ -14,13 +12,9 @@ const VideoPlayer: FC<IVideoPlayer> = ({ videoSource, slug }) => {
 	const { user } = useAuth()
 
 	return (
-		<div
-			className={cn(styles.wrapper, {
-				'h-96': !user,
-			})}
-		>
+		<div className={cn(styles.container, {'height': !user,})}>
 			{user ? (
-				<>
+				<div className={styles.wrapper}>
 					<video
 						ref={videoRef}
 						className={styles.video}
@@ -75,7 +69,7 @@ const VideoPlayer: FC<IVideoPlayer> = ({ videoSource, slug }) => {
 							</button>
 						</div>
 					</div>
-				</>
+				</div>
 			) : (
 				<AuthPlaceholder slug={slug} />
 			)}
@@ -84,7 +78,7 @@ const VideoPlayer: FC<IVideoPlayer> = ({ videoSource, slug }) => {
 }
 
 // If you wanna add change quality buttons
-//kmoskwiak.github.io/videojs-resolution-switcher/
-//https://stackoverflow.com/questions/38626993/change-video-quality-with-sources-pointing-to-different-quality-versions
+// kmoskwiak.github.io/videojs-resolution-switcher/
+// https://stackoverflow.com/questions/38626993/change-video-quality-with-sources-pointing-to-different-quality-versions
 
 export default VideoPlayer

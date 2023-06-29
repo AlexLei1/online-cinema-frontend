@@ -28,7 +28,11 @@ const Layout: FC = ({ children }) => {
 				<Header isShow={burger.isShow}/>
 				<Sidebar isShow={burger.isShow}/>
 			</div>
-			<div className={cn([!burger.isShow ? 'menuOpen' : ''], 'wrapper') }>{children}</div>
+			<div className={cn([!burger.isShow ? 'menuOpen' : '']) }>
+				<div className='wrapper'>
+					{children}
+				</div>
+			</div>
 		</>
 	)
 }

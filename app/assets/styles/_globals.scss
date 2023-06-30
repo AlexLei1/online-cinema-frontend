@@ -41,8 +41,24 @@ body {
 }
 
 section {
-	margin: 68px 0px 68px 0px;
+	margin: 100px 0px 100px 0px;
 	
+	@include desktopM {
+		margin: 55px 0px 55px 0px;
+	}
+
+	@include desktopM {
+		margin: 55px 0px 55px 0px;
+	}
+
+	@include desktopM {
+		margin: 55px 0px 55px 0px;
+	}
+
+	@include desktopM {
+		margin: 55px 0px 55px 0px;
+	}
+
 	@include desktopM {
 		margin: 55px 0px 55px 0px;
 	}

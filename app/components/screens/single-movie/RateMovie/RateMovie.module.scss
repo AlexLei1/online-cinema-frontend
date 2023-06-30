@@ -3,52 +3,97 @@
 
 
 .container {
+	position: relative;
 	display: flex;
-	align-items: center;
 	flex-direction: column;
+	align-items: center;
 
 	.wrapper {
-		max-width: 700px;
-		margin-top: 40px;
-		margin-bottom: 40px;
-		border-radius: 12px;
-		background-color: $gray-color-950;
-		color: #fff;
-		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
-		padding: 28px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		text-align: center;
+		padding: 28px;
 		height: 100%;
+		background-color:$gray-color-950;
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+		border-radius: 12px;
 		
-		@include mobileL {
-
+		@include desktopM {
+			padding: 28px;
 		}
-
-		> h3 {
-			font-size: 24px;
-			line-height: 32px;
-			font-weight: 600;
+		@include tabletL {
+			padding: 28px;
+		}
+		@include mobileL {
+			padding: 20px;
+		}
+		@include mobileS {
+			padding: 28px;
 		}
 	
 		> p {
-			margin-top: 8px;
+			color: #fff;
 			margin-bottom: 12px;
-			font-size: 18px;
-			line-height: 28px;
+			font-size: $fz-lg;
 			opacity: 0.6;
+
+			@include desktopM {
+				font-size: $fz-lg;
+				margin-bottom: 12px;
+			}
+			@include tabletL {
+				font-size: $fz-lg;
+				margin-bottom: 12px;
+			}
+			@include mobileL {
+				font-size: $fz-lg;
+				margin-bottom: 12px;
+			}
+			@include mobileS {
+				font-size: $fz-lg;
+				margin-bottom: 12px;
+			}
 		}
 	
 		> div {
 			font-size: 36px;
-			line-height: 40px;
 			opacity: 0.9;
+
+			@include desktopM {
+				font-size: 36px;
+			}
+			@include tabletL {
+				font-size: 36px;
+			}
+			@include mobileL {
+				font-size: 36px;
+			}
+			@include mobileS {
+				font-size: 36px;
+			}
 		}
 	
 		> .thanks {
 			color: $yellow-color-700;
 			font-size: 30px;
-			line-height: 36px;
 			font-weight: 600;
 			animation: scaleIn .35s ease-in-out;
+
+			@include desktopM {
+				font-size: 30px;
+			}
+			@include tabletL {
+				font-size: 30px;
+			}
+			@include mobileL {
+				font-size: 30px;
+			}
+			@include mobileS {
+				font-size: 30px;
+			}
 		}
 	}
 }

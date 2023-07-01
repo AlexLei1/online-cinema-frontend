@@ -16,20 +16,19 @@
 	border-radius: 12px;
 	
 	@include desktopM {
-		padding: 28px;
 		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
 	}
 	@include tabletL {
-		padding: 28px;
-		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+		padding: 25px;
+		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
 	}
 	@include mobileL {
 		padding: 20px;
-		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
 	}
 	@include mobileS {
-		padding: 28px;
-		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+		padding: 15px;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 	}
 }
 
@@ -40,27 +39,12 @@
 	border-radius: 10px;
 	transition: $transition;
 	padding: 8px 28px;
-	font-size: 18px;
+	font-size: $fz-lg;
 
-	@include desktopM {
-		border-radius: 10px;
-		padding: 8px 28px;
-		font-size: 18px;
-	}
-	@include tabletL {
-		border-radius: 10px;
-		padding: 8px 28px;
-		font-size: 18px;
-	}
 	@include mobileL {
-		border-radius: 10px;
-		padding: 8px 28px;
-		font-size: 18px;
-	}
-	@include mobileS {
-		border-radius: 10px;
-		padding: 8px 28px;
-		font-size: 18px;
+		border-radius: 8px;
+		padding: 6px 25px;
+		font-size: $fz-md;
 	}
 
 }

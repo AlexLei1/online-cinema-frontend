@@ -21,18 +21,21 @@
 		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
 		border-radius: 12px;
 		
-		@include desktopM {
-			padding: 28px;
-		}
-		@include tabletL {
-			padding: 28px;
-		}
-		@include mobileL {
-			padding: 20px;
-		}
-		@include mobileS {
-			padding: 28px;
-		}
+	@include desktopM {
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	}
+	@include tabletL {
+		padding: 25px;
+		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
+	}
+	@include mobileL {
+		padding: 20px;
+		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+	}
+	@include mobileS {
+		padding: 15px;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+	}
 	
 		> p {
 			color: #fff;
@@ -40,59 +43,29 @@
 			font-size: $fz-lg;
 			opacity: 0.6;
 
-			@include desktopM {
-				font-size: $fz-lg;
-				margin-bottom: 12px;
-			}
 			@include tabletL {
-				font-size: $fz-lg;
-				margin-bottom: 12px;
-			}
-			@include mobileL {
-				font-size: $fz-lg;
-				margin-bottom: 12px;
-			}
-			@include mobileS {
-				font-size: $fz-lg;
-				margin-bottom: 12px;
+				font-size: $fz-md;
+				margin-bottom: 8px;
 			}
 		}
 	
 		> div {
 			font-size: 36px;
 			opacity: 0.9;
-
-			@include desktopM {
-				font-size: 36px;
-			}
-			@include tabletL {
-				font-size: 36px;
-			}
+	
 			@include mobileL {
-				font-size: 36px;
-			}
-			@include mobileS {
-				font-size: 36px;
+				font-size: 30px;
 			}
 		}
 	
 		> .thanks {
 			color: $yellow-color-700;
-			font-size: 30px;
+			font-size: 36px;
 			font-weight: 600;
 			animation: scaleIn .35s ease-in-out;
 
-			@include desktopM {
-				font-size: 30px;
-			}
-			@include tabletL {
-				font-size: 30px;
-			}
 			@include mobileL {
-				font-size: 30px;
-			}
-			@include mobileS {
-				font-size: 30px;
+				font-size: $fz-xxl;
 			}
 		}
 	}

@@ -41,27 +41,16 @@ body {
 }
 
 section {
-	margin: 100px 0px 100px 0px;
+	margin: 80px 0px 80px 0px;
 	
-	@include desktopM {
-		margin: 55px 0px 55px 0px;
+
+	@include tabletL {
+		margin: 50px 0px 50px 0px;
+	}
+	@include mobileL {
+		margin: 40px 0px 40px 0px;
 	}
 
-	@include desktopM {
-		margin: 55px 0px 55px 0px;
-	}
-
-	@include desktopM {
-		margin: 55px 0px 55px 0px;
-	}
-
-	@include desktopM {
-		margin: 55px 0px 55px 0px;
-	}
-
-	@include desktopM {
-		margin: 55px 0px 55px 0px;
-	}
 }
 
 Scrollbar

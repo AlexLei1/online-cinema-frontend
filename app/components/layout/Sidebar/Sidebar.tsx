@@ -6,8 +6,6 @@ interface ISidebar {
 	isShow: boolean
 }
 
-
-
 const Sidebar: FC<ISidebar> = ({isShow}) => {
 	return (
 		<div hidden={isShow} className={styles.sidebar}>

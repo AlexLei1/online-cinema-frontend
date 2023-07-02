@@ -4,13 +4,13 @@ import { IMovieList } from './movie.types'
 import MovieItem from './MovieItem'
 import styles from './MovieList.module.scss'
 import MenuHeading from '@/components/ui/heading/MenuHeading';
-import useResize  from '@/hooks/useResize';
+import useWidth  from '@/hooks/useWidth';
 import useActions  from '@/hooks/useActions';
 import { useTypedSelector } from '@/hooks/useTypedSelector';
 
 
 const MovieList: FC<{ list: IMovieList }> = ({list: { link, movies, title }}) => {
-	const {isWidth} = useResize()
+	const {width} = useWidth()
 	const { toggleBurger } = useActions() 
 	const {isShow} = useTypedSelector(state => state.burger)
 
@@ -22,7 +22,7 @@ const MovieList: FC<{ list: IMovieList }> = ({list: { link, movies, title }}) =>
 				<MovieItem key={movie._id} movie={movie} />
 			))}
 			<Link href={link}>
-				{isWidth ? <a className={styles.button}>See more</a> : <a  onClick={() => toggleBurger({isShow})} className={styles.button}>See more</a>}
+				{(width >= 1200) ? <a className={styles.button}>See more</a> : <a  onClick={() => toggleBurger({isShow})} className={styles.button}>See more</a>}
 			</Link>
 		</div>
 	)

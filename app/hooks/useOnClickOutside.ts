@@ -1,19 +1,19 @@
 import { useEffect, useRef } from "react"
-import useResize from './useResize';
+import useWidth from './useWidth';
 
 export const useOnClickOutside = (toggleBurger: any, isShow: any ) => {
-	const {isWidth} = useResize()
+	const {width} = useWidth()
 
 	const ref = useRef<HTMLDivElement>(null) 
 
-	const hendleClickOutside = (event: any) => {
-		if (ref.current && !ref.current.contains(event.target) && isShow && !isWidth) {
+	const handleClickOutside = (event: any) => {
+		if (ref.current && !ref.current.contains(event.target) && isShow && !(width >= 1200)) {
 			toggleBurger(!isShow)
 		}
 	}
 	useEffect(() => {
-		document.addEventListener('click', hendleClickOutside, true)
-		return () => {document.removeEventListener('click', hendleClickOutside, true)}
+		document.addEventListener('click', handleClickOutside, true)
+		return () => {document.removeEventListener('click', handleClickOutside, true)}
 	})
 
 	return {ref}

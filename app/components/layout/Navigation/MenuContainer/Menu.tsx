@@ -4,7 +4,6 @@ import styles from './Menu.module.scss'
 import MenuItem from './MenuItem'
 import { IMenu } from './menu.types'
 import MenuHeading from '@/components/ui/heading/MenuHeading'
-import useResize from '@/hooks/useResize';
 
 const DynamicAuthItems = dynamic(() => import('./auth/AuthItems'), {
 	ssr: false,
@@ -12,7 +11,7 @@ const DynamicAuthItems = dynamic(() => import('./auth/AuthItems'), {
 
 const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
 
-	const {isWidth} = useResize()
+
 
 	return (
 		<div className={styles.menu}>

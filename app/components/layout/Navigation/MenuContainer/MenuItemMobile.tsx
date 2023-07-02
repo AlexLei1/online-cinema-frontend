@@ -9,7 +9,7 @@ import styles from './Menu.module.scss'
 import { IMenuItem } from './menu.types'
 
 import { useTypedSelector } from '@/hooks/useTypedSelector';
-import useResize from '@/hooks/useResize'
+
 import useActions from '@/hooks/useActions';
 
 

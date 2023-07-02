@@ -1,12 +1,7 @@
-import { useTypedSelector } from '@/hooks/useTypedSelector';
-import useResize  from '@/hooks/useResize';
-
+import { useTypedSelector } from '@/hooks/useTypedSelector'
 
 export const useBurger = () => {
-	const {isWidth} = useResize()
-
 	const { burger } = useTypedSelector(state => state)
-
-
+	
 	return {burger}	
 } 

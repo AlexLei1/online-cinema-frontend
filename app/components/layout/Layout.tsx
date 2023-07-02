@@ -5,20 +5,22 @@ import styles from './Layout.module.scss'
 import Header from './Header/Header';
 import { useBurger } from '@/hooks/useBurger';
 import cn from 'classnames';
-import useResize from '@/hooks/useResize';
+import useWidth from '@/hooks/useWidth';
 import useActions from '@/hooks/useActions';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
 
+
+
 const Layout: FC = ({ children }) => {
 	const { burger } = useBurger()
-	const {isWidth} = useResize()
+	const {width} = useWidth()
 	const {toggleBurger} = useActions()
 	const {ref} = useOnClickOutside(toggleBurger, !burger.isShow)
-	
+
 
 	useEffect(() => {
-		!burger.isShow !== isWidth ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
- 	}, [burger.isShow, isWidth]);
+		(!burger.isShow) !== (width >= 1200) ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
+ 	}, [burger.isShow, width]);
 
 
 	return (

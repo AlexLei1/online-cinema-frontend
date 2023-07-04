@@ -1,7 +1,14 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .form {
-	@apply w-1/2 mt-12;
+	width: 50%;
+
+	@include mobileL {
+		width: 100%;
+	}
 
 	> button {
-		@apply mt-5;
+		margin-top: 20px;
 	}
 }

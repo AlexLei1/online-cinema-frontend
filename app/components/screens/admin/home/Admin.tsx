@@ -1,18 +1,17 @@
 import { FC } from 'react'
-
 import AdminNavigation from '@/ui/admin-navigation/AdminNavigation'
-import Heading from '@/ui/heading/Heading'
-
 import { Meta } from '@/utils/meta'
-
 import Statistics from './Statistics/Statistics'
+import  SubHeading  from '@/ui/heading/SubHeading';
 
 const Admin: FC = () => {
 	return (
 		<Meta title="Admin panel">
 			<AdminNavigation />
-			<Heading title="Some statistics" />
-			<Statistics />
+			<section>
+				<SubHeading title="Some statistics" />
+				<Statistics />
+			</section>
 		</Meta>
 	)
 }

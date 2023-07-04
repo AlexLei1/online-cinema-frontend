@@ -1,0 +1,62 @@
+@media (max-width: 1200px) {
+  .burger {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 0;
+  }
+  .burger > span {
+    height: 2px;
+    width: 30px;
+    background-color: white;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+  }
+  .burger > span::before {
+    left: 0;
+    position: absolute;
+    top: -8px;
+    height: 2px;
+    width: 35px;
+    background-color: rgb(255, 255, 255);
+    content: "";
+    transition-duration: 0.2s;
+    transition: transform 0.2s, top 0.2s 0.2s;
+  }
+  .burger > span::after {
+    left: 0;
+    position: absolute;
+    top: 8px;
+    height: 2px;
+    width: 35px;
+    background-color: rgb(255, 255, 255);
+    content: "";
+    transition-duration: 0.2s;
+    transition: transform 0.2s, top 0.2s 0.2s;
+  }
+  .active {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 0;
+  }
+  .active > span {
+    height: 0px;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+    background-color: none;
+    background: transparent;
+  }
+  .active > span::before {
+    transition: top 0.2s, transform 0.2s 0.2s;
+    top: 0px;
+    transform: rotateZ(-45deg);
+  }
+  .active > span::after {
+    transition: top 0.4s, transform 0.2s 0.2s;
+    top: 0px;
+    transform: rotateZ(45deg);
+  }
+}

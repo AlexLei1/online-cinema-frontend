@@ -1,0 +1,23 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.movies > a {
+  max-width: 30%;
+  -webkit-animation: fade 0.5s ease-in-out;
+          animation: fade 0.5s ease-in-out;
+}
+.movies > a:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.button {
+  background-color: #E30B13;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px 40px;
+}

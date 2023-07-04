@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+@keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+@-webkit-keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-color: #e6e6e6;
+  --gray-color-300: #d9dae8;
+  --gray-color-500: #999AA5;
+  --gray-color-600: #66676E;
+  --gray-color-700: #39393f;
+  --gray-color-800: #242529;
+  --gray-color-900: #191B1F;
+  --gray-color-950: #101215;
+  --yellow-color-700: #F5C521;
+  --white-color: rgb(255, 255, 255);
+  --black-color: rgb(255, 255, 255);
+  --dark-navy: #020c1b;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-sub-heading: clamp(14px, 5vw, 28px);
+  --fz-heading: clamp(16px, 5vw, 38px);
+  --shadow-list: 0px 0px 18px 0px var(--primary-color);
+  --shadow-logo: 3px 3px 2px var(--primary-color);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background-color: #191B1F;
+}
+
+section {
+  margin: 80px 0px 80px 0px;
+}
+@media only screen and (max-width: 768px) {
+  section {
+    margin: 50px 0px 50px 0px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  section {
+    margin: 40px 0px 40px 0px;
+  }
+}
+
+Scrollbar html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(95, 15, 192) rgb(143, 28, 28);
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #39393f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #505050;
+  border: 3px solid #66676E;
+  border-radius: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a input[type=file],
+input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+input:focus {
+  box-shadow: none !important;
+}
+
+.admin-form {
+  width: 50%;
+  margin-top: 48px;
+}
+
+/* Slide animation */
+.slide-animation-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.slide-animation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.slide-animation-exit {
+  opacity: 1;
+}
+
+.slide-animation-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Arrow */
+#left {
+  left: calc(4% + 1px);
+}
+
+#leftSlider {
+  left: calc(80% + 1px);
+  top: calc(80% + 1px);
+}
+
+#right {
+  right: calc(4% + 1px);
+}
+
+#rightSlider {
+  right: calc(4% + 1px);
+  top: calc(80% + 1px);
+}
+
+.wrapper {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1680px;
+  min-height: 100vh;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 67px 50px 0px 50px;
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 55px 50px 0px 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 67px 15px 0px 15px;
+  }
+}
+
+.menuOpen {
+  padding: 0px 315px;
+}
+@media only screen and (max-width: 1200px) {
+  .menuOpen {
+    padding: 0px 50px;
+    filter: blur(10px);
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.react-multi-carousel-list > .react-multi-carousel-track {
+  gap: 15px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.test {
+  padding-top: 150px;
+}
+
+.height {
+  height: 200px;
+}

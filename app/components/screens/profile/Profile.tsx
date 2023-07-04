@@ -51,19 +51,21 @@ const Profile: FC = () => {
 	return (
 		<Meta title="Profile">
 			<Heading title="Profile" />
-			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-				{isLoading ? (
-					<SkeletonLoader count={2} />
-				) : (
-					<AuthFields
-						register={register}
-						formState={formState}
-						isPasswordRequired={false}
-					/>
-				)}
+			<section>
+				<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+					{isLoading ? (
+						<SkeletonLoader count={2} />
+					) : (
+						<AuthFields
+							register={register}
+							formState={formState}
+							isPasswordRequired={false}
+						/>
+					)}
 
-				<Button>Update</Button>
-			</form>
+					<Button>Update</Button>
+				</form>
+			</section>
 		</Meta>
 	)
 }

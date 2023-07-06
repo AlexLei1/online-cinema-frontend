@@ -1,11 +1,21 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .selectContainer {
-	@apply relative mb-8 animate-fade;
+	position: relative;
+	margin-bottom: 32px;
+	animation: fade .5s ease-in-out;
 
 	> label {
-		@apply block;
+		display: block;
 
 		> span {
-			@apply text-xs uppercase text-gray-600 block mb-1;
+			font-size: 12px;
+			line-height: 16px;
+			text-transform: uppercase;
+			color: $gray-color-600;
+			display: block;
+			margin-bottom: 4px;
 		}
 	}
 }

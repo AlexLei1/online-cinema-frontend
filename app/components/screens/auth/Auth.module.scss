@@ -48,6 +48,10 @@
     	left: 20%;
 			width: 60%;
 		}
+		@include mobileL {
+    	left: 10%;
+			width: 80%;
+		}
 
 	}
 }

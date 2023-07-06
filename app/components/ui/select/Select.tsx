@@ -1,9 +1,7 @@
 import { FC } from 'react'
 import ReactSelect, { OnChangeValue } from 'react-select'
 import makeAnimated from 'react-select/animated'
-
 import formStyles from '../form-elements/form.module.scss'
-
 import styles from './Select.module.scss'
 import { IOption, ISelect } from './select.interface'
 

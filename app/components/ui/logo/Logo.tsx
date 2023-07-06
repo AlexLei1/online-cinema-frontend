@@ -7,11 +7,7 @@ const Logo: FC = () => {
 	return (
 		<Link href="/">
 			<a className={styles.link}>
-				<img
-					src={logoImage.src}
-					alt="Movie app"
-					draggable={false}
-				/>
+				<img src={logoImage.src} alt="Movie app" draggable={false}/>
 			</a>
 		</Link>
 	)

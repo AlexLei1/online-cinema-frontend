@@ -151,7 +151,7 @@ input:focus {
 .wrapper {
 	margin: 0px auto;
 	width: 100%;
-	max-width: 1680px;
+	max-width: 1000px;
 	min-height: 100vh;
 	transition: $transition;
 	padding:  67px 50px 0px 50px;
@@ -162,6 +162,20 @@ input:focus {
 	@include tabletL {
 		padding:  55px 15px 0px 15px;
 	}
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.test {
+	padding-top: 150px;
+}
+
+.height {
+	height: 200px;
 }
 
 .menuOpen {
@@ -182,22 +196,109 @@ input:focus {
 	> .react-multi-carousel-track {
 		gap: 15px;
 		
-		> .react-multi-carousel-item {
+		// > .react-multi-carousel-item {
 			
-		}
+		// }
 	}
 }
 
-.container {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
 
-.test {
-	padding-top: 150px;
-}
 
-.height {
-	height: 200px;
+/* React Select */
+.custom-select {
+	&__control {
+		background-color: transparent !important;
+		border: none !important;
+		border-radius: 0 !important;
+		border-bottom: 1px solid $gray-color-500 !important;
+		box-shadow: none !important;
+
+		&--menu-is-open {
+			border-color: $primary-color !important;
+		}
+	}
+
+	&__value-container {
+		padding: 0 !important;
+		cursor: text !important;
+	}
+
+	&__input-container {
+		color: $gray-color-500 !important;
+	}
+
+	&__indicator-separator {
+		display: none !important;
+	}
+
+	&__indicators {
+		cursor: pointer !important;
+	}
+
+	&__indicator {
+		color: $gray-color-500 !important;
+
+		&:hover {
+			color: $gray-color-500 !important;
+		}
+	}
+
+	&__multi-value {
+		background-color: rgba($gray-color-500, 0.6) !important;
+		border-radius: 0.5rem !important;
+	}
+
+	&__multi-value__label {
+		font-size: 80% !important;
+		color: rgba($white-color, 0.7) !important;
+	}
+
+	&__multi-value__remove {
+		color: rgba($white-color, 0.8) !important;
+
+		&:hover {
+			background-color: transparent !important;
+			color: rgba($white-color, 1) !important;
+		}
+	}
+
+	&__menu {
+		background-color: $gray-color-700 !important;
+		color: rgba($white-color, 0.6) !important;
+	}
+
+	&__option {
+		cursor: pointer !important;
+		&--is-focused {
+			background-color: lighten($gray-color-800, 8%) !important;
+		}
+	}
+
+	&-container {
+		> div {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-control__control {
+			border-color: $gray-color-600 !important;
+			box-shadow: none !important;
+			outline: none;
+			border: none;
+			transition: $transition;
+		}
+
+		&:hover,
+		&--menu-is-open {
+			border-color: $gray-color-300 !important;
+		}
+
+		.form-control__indicators {
+			cursor: pointer;
+		}
+	}
+
+	&__menu {
+		animation: scaleIn .35s ease-in-out;
+	}
 }

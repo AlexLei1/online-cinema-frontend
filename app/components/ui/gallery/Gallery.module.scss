@@ -6,9 +6,8 @@
 	position: relative;
 	display: flex;
 	align-items: flex-end;
-
 	overflow: auto;
-	transition: all ease-in-out .2s;
+	transition: $transition;
 	width: 100%;
 
 	&:hover {
@@ -30,7 +29,7 @@
 	}
 
 	&.horizontal {
-		margin-bottom: 32px;
+		min-width: 270px;
 		height: 176px;
 	}
 

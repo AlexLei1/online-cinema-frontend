@@ -32,11 +32,10 @@ const Catalog: FC<ICatalog> = ({ title, description, movies }) => {
 						/>
 					))}
 				</div>
+				<div className="text-center">
+					<button className={styles.button}>Load more</button>
+				</div>
 			</section>
-
-			<div className="text-center">
-				<button className={styles.button}>Load more</button>
-			</div>
 		</Meta>
 	)
 }

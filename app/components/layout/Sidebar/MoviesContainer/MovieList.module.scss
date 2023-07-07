@@ -4,28 +4,27 @@
 .list {
 	margin: 40px 0px;
 
-	@include desktopM{
-		margin: 40px 0px;
-	}
-
-
-
 	.button {
 		display: block;
 		text-align: center;
 		background-color: $primary-color;
-		color: #fff;
+		color: $white-color;
 		border-radius: 10px;
-		transition: background-color .3s ease-in-out;
-		padding: 10px;
-
-		@include desktopM{
-			font-size: $fz-xxs;
-			border: none;
-		}
+		transition: $transition;
+		padding: 12px 40px;
+		opacity: .7;
+		font-size: $fz-md;
+		line-height: $fz-md;
 
 		&:hover {
-			background-color:red;
+			opacity: 1;
+		}
+		
+		@include desktopM{
+			font-size: $fz-sm;
+			line-height: $fz-sm;
+			padding: 6px 14px;
+			border-radius: 8px;
 		}
 	}
 
@@ -46,13 +45,11 @@
 
 		.photo {
 			position: relative;
-			border: 1px solid var(--primary-color);
+			border: 1px solid $white-color;
 			border-radius: 8px;
 			grid-column: 1 / 6;
 			grid-row: 1 / -1;
 			z-index: 1;
-
-			
 
 			@include desktopM{
 				border-radius: 8px;
@@ -60,13 +57,13 @@
 			}
 
 			> div {
-				transition: var(--transition);
+				transition: $transition;
 				z-index: 1;
 
 				> img {
 					border-radius: 8px;
-					border: 1px solid transparent !important;
-					transition: all ease-in-out .2s;
+					transition: $transition;
+					box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 1) inset;
 
 					@include desktopM{
 						filter: blur(5px);
@@ -76,8 +73,8 @@
 
 			&:hover {
 				img {
-					border-color: var(--primary-color) !important;
-					box-shadow: var(--shadow-list);
+					border-color: $white-color !important;
+					box-shadow: 0px 0px 50px 0px rgba(36, 127, 197, 1) inset;
 					
 					@include desktopM{
 						filter: none;

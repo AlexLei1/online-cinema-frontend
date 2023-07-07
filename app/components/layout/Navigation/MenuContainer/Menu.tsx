@@ -11,8 +11,6 @@ const DynamicAuthItems = dynamic(() => import('./auth/AuthItems'), {
 
 const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
 
-
-
 	return (
 		<div className={styles.menu}>
 			<MenuHeading title={title}/>

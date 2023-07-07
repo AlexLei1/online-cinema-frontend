@@ -7,12 +7,33 @@
 
 	.slide {
 		position: relative;
-		height: 320px;
-		border-radius: 24px;
+		height: 270px;
+		border-radius: 25px;
 		overflow: hidden;
-		box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.68);
+		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
 		align-items: flex-end;
 		display: flex;
+
+		@include desktopL {
+			height: 225px;
+			border-radius: 20px;
+		}
+		@include desktopM{
+			height: 270px;
+			border-radius: 25px;
+		}	
+		@include tabletL{	
+			height: 225px;
+			border-radius: 20px;
+		}
+		@include mobileL{
+			height: 180px;
+			border-radius: 15px;
+		}
+		@include mobileS{
+			height: 135px;
+			border-radius: 10px;
+		}
 	
 		@include fade-bg-gradient();
 
@@ -25,10 +46,26 @@
 		.content {
 			position: relative;
 			z-index: 2;
-			padding: 32px;
+			padding: 30px;
+
+			@include desktopL{
+				padding: 25px
+			}
+			@include desktopM{	
+				padding: 30px
+			}
+			@include tabletL{
+				padding: 25px
+			}
+			@include mobileL{
+				padding: 20px
+			}
+			@include mobileS{
+				padding: 15px
+			}
 
 			.heading {
-				color: rgb(255 255 255 / 1);
+				color: $white-color;
 				text-transform: uppercase;
 				font-size: 48px;
   			line-height: 1;
@@ -50,7 +87,7 @@
 			}
 
 			.subHeading {
-  			color: rgb(217 218 232 / 1);
+  			color: $white-color;
 				font-weight: 500;
 				text-transform: uppercase;
 				font-size: 16px;
@@ -60,91 +97,46 @@
 				
 				@include tabletL{
 					margin-bottom: 10px;
-					font-size: 14px;
+					font-size: $fz-sm;
 				}
 				@include mobileL{
 					margin-bottom: 6px;
-					font-size: 13px;
+					font-size: $fz-xs;
 				}
 				@include mobileS{
 					margin-bottom: 2px;
-					font-size: 12px;
+					font-size: $fz-xxs;
 				}
 			}
 
 			.button {
-				background-color: #E30B13;
-				color: #fff;
+				background-color: $primary-color;
+				color: $white-color;
 				border-radius: 10px;
-				transition: background-color .3s ease-in-out;
+				transition: $transition;
 				padding: 8px 40px;
+				opacity: .7;
 
 				&:hover {
-					background-color: #ff0009;
+					opacity: 1;
 				}
 				
 				@include tabletL{
-					font-size: 14px;
+					font-size: $fz-sm;
 					padding: 6px 35px;
 					border-radius: 8px;
 				}
 				@include mobileL{
-					font-size: 12px;
+					font-size: $fz-xs;
 					padding: 4px 30px;
-					border-radius: 8px;
+					border-radius: 7px;
 				}
 				@include mobileS{
-					font-size: 10px;
+					font-size: $fz-xxs;
 					padding: 2px 20px;
-					border-radius: 4px;
+					border-radius: 6px;
 				}
 			}
-
-			@include desktopM{
-				padding: 32px
-			}
-			@include desktopXS{	
-				padding: 25px
-			}
-			@include tabletL{
-				padding: 20px
-			}
-			@include mobileL{
-				padding: 15px
-			}
-			@include mobileS{
-				padding: 10px
-			}
-		}
-
-
-		@include desktopL{
-			height: 250px;
-			border-radius: 20px;
-		}
-		@include desktopM{
-			height: 300px;
-			border-radius: 20px;
-		}
-		@include desktopXS{
-			height: 250px;
-			border-radius: 15px;
-			box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.68);
-		}	
-		@include tabletL{	
-			height: 200px;
-			border-radius: 15px;
-			box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.68);
-		}
-		@include mobileL{
-			height: 150px;
-			border-radius: 10px;
-			box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.68);
-		}
-		@include mobileS{
-			height: 100px;
-			border-radius: 10px;
-			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.68);
 		}
 	}
 }

@@ -15,25 +15,16 @@
 	backdrop-filter: blur(2px);
 	color: white;
 
-
-	@include desktopS {
-		font-size: 22px;
-		padding: 6px;
-	}
-	@include desktopXS{	
-		font-size: 22px;
-		padding: 6px;
-	}
 	@include tabletL{
-		font-size: 20px;
+		font-size: $fz-xl;
 		padding: 4px;
 	}
 	@include mobileL{
-		font-size: 18px;
+		font-size: $fz-lg;
 		padding: 3px;
 	}
 	@include mobileS{
-		font-size: 12px;
+		font-size: $fz-md;
 		padding: 3px;
 	}
 }

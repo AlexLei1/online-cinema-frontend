@@ -1,11 +1,42 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .actions {
-	@apply flex items-center;
+	display: flex;
+	align-items: center;
 
 	> button {
-		@apply outline-border-none bg-transparent text-xl text-primary opacity-80 transition-opacity hover:opacity-100;
+		outline: none;
+  	border: none;
+		background-color: transparent;
+		font-size: $fz-xl;
+  	line-height: $fz-xl;
+		color: $primary-color;
+		opacity: .7;
+		transition: $transition;
+
+		:hover {
+			opacity: 1;
+		}
+		
+		@include tabletL{
+			font-size: 14px;
+			padding: 6px 35px;
+			border-radius: 8px;
+		}
+		@include mobileL{
+			font-size: 12px;
+			padding: 4px 30px;
+			border-radius: 8px;
+		}
+		@include mobileS{
+			font-size: 10px;
+			padding: 2px 20px;
+			border-radius: 6px;
+		}
 
 		&:first-child {
-			@apply mr-4;
+			margin-right: 16px;
 		}
 	}
 }

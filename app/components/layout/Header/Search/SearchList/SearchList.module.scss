@@ -28,7 +28,7 @@
 			background-color: transparent;
 			content: '';
 			top: 20%;
-			transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+			transition: $transition;
 		}
 
 		&:hover::after {

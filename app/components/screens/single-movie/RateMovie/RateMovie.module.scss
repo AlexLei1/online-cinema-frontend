@@ -21,21 +21,21 @@
 		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
 		border-radius: 12px;
 		
-	@include desktopM {
-		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
-	}
-	@include tabletL {
-		padding: 25px;
-		box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
-	}
-	@include mobileL {
-		padding: 20px;
-		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
-	}
-	@include mobileS {
-		padding: 15px;
-		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-	}
+		@include desktopM {
+			box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+		}
+		@include tabletL {
+			padding: 25px;
+			box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.5);
+		}
+		@include mobileL {
+			padding: 20px;
+			box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.5);
+		}
+		@include mobileS {
+			padding: 15px;
+			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+		}
 	
 		> p {
 			color: #fff;

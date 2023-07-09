@@ -1,13 +1,20 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .form {
-	@apply mt-12;
+	margin-top: 48px;
 	.fields {
-		@apply flex items-center flex-wrap justify-between;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
 		> div {
 			width: 48%;
 		}
 	}
 
 	> button {
-		@apply mt-10;
+		margin-top: 40px
 	}
 }

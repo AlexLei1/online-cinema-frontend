@@ -102,7 +102,7 @@
 			}
 			
 			.title {
-				color: white;
+				color: $white-color;
 				font-size: $fz-lg;
 				font-weight: 500;
 				overflow: hidden;
@@ -117,8 +117,8 @@
 
 			.genres {
 				color: $gray-color-500;
-				font-size: 14px;
-  			line-height: 20px;
+				font-size: $fz-sm;
+  			line-height: $fz-sm;
 
 				@include desktopM{
 					display: none;
@@ -134,20 +134,18 @@
 				}
 				
 				> svg {
-					fill: #F5C521;
+					fill: $yellow-color-700;
 					margin-right: 4px;
-					font-size: 18px;
+					font-size: $fz-lg;
 				}
 
 				> span {
-					color: white;
+					color: $white-color;
 					font-weight: 500;
 					padding-top: 1.5px;
-					line-height: 16px;
+					line-height: $fz-md;
 				}
 			}
 		}
-
-		
 	}
 }

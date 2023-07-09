@@ -1,8 +1,9 @@
-@import 'app/assets/styles/mixins';
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
 
 $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 	0 3px 3px 0 rgb(0 0 0 / 15%);
-
+	//?
 .collections {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -44,7 +45,6 @@ $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 		gap: 15px 10px;
 	}
-	
 }
 .container {
 	width: 100%;
@@ -61,6 +61,21 @@ $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 		height: 200px;
 		transition: all ease-in-out .2s;
 		
+		@media (max-width: 992px){
+			height: 170px;
+		}
+
+		@media (max-width: 768px){
+			height: 150px;
+		}
+	
+		@media (max-width: 480px){
+			height: 130px;
+		}
+	
+		@media (max-width: 320px){
+			height: 100px;
+		}
 	
 		@include fade-bg-gradient(0deg);
 		&::before {
@@ -132,23 +147,6 @@ $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 				color: rgb(255 255 255 / 1);
 				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 			}
-		}
-
-	
-		@media (max-width: 992px){
-			height: 170px;
-		}
-
-		@media (max-width: 768px){
-			height: 150px;
-		}
-	
-		@media (max-width: 480px){
-			height: 130px;
-		}
-	
-		@media (max-width: 320px){
-			height: 100px;
 		}
 	}
 }

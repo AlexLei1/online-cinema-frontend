@@ -1,7 +1,15 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
 .header {
-	@apply flex items-center justify-between mt-8;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 32px;
 
 	> button {
 		@apply bg-primary bg-opacity-80;
+		background-color: $primary-color;
 	}
+	//?
 }

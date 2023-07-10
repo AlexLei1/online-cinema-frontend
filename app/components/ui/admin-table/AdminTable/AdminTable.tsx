@@ -1,7 +1,5 @@
 import { FC } from 'react'
-
 import SkeletonLoader from '../../skeleton-loader/SkeletonLoader'
-
 import styles from './AdminTable.module.scss'
 import AdminTableHeader from './AdminTableHeader'
 import AdminTableItem from './AdminTableItem'

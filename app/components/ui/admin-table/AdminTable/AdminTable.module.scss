@@ -1,8 +1,7 @@
 @import 'assets/styles/variables';
 @import 'assets/styles/mixins';
-	//?
+
 .item {
-	@apply flex items-center justify-between bg-gray-700 bg-opacity-20 mt-4 px-5 rounded-lg transition-colors hover:bg-opacity-50;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -18,11 +17,9 @@
 	}
 
 	> div {
-		@apply text-white text-opacity-80 py-3;
-		color: $white-color;
+		color: rgb($white-color, .8);
 		padding-top: 12px;
   	padding-bottom: 12px;
-		
 		width: 24%;
 
 		&:last-child {
@@ -33,23 +30,25 @@
 }
 
 .itemHeader {
-	@apply bg-primary bg-opacity-20 shadow-lg mt-8 hover:bg-opacity-20;
-	background-color: $primary-color;
+	background-color: rgb($primary-color, .9);
 	margin-top: 32px;
-
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .5);
+	
 	&:hover {
-
+		background-color: rgb($primary-color, .9);
 	}
+	  
 	> div {
-		@apply text-opacity-90 font-semibold py-2.5;
+		font-weight: 600;
+		padding-top: 10px;
+  	padding-bottom: 10px;
 	}
 }
 
 .notFound {
-	@apply text-lg text-white text-opacity-60 text-center py-3;
 	font-size: $fz-lg;
   line-height: $fz-lg;
-	color: $white-color;
+	color: rgb($white-color, .6);
 	text-align: center;
 	padding-top: 12px;
   padding-bottom: 12px;

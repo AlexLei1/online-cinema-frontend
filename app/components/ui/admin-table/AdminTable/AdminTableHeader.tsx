@@ -1,6 +1,5 @@
 import cn from 'classnames'
 import { FC } from 'react'
-
 import styles from './AdminTable.module.scss'
 
 const AdminTableHeader: FC<{ headerItems: string[] }> = ({ headerItems }) => {

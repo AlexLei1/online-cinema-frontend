@@ -1,4 +1,7 @@
-@media(max-width: 1200px){
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+@include desktopM{
 	.burger {
 		display: flex;
 		cursor: pointer;
@@ -6,11 +9,10 @@
 		border: none;
 		padding: 0;
 		
-	
 		> span {
 			height: 2px;
 			width: 30px;
-			background-color: white;
+			background-color: $white-color;
 			transition-duration: .2s;
 			transition-delay: .2s;	
 	
@@ -20,7 +22,7 @@
 				top: -8px;
 				height: 2px;
 				width: 35px;
-				background-color: rgb(255, 255, 255);
+				background-color: $white-color;
 				content: "";
 				transition-duration: .2s;
 				transition: transform .2s, top .2s .2s;
@@ -32,7 +34,7 @@
 				top: 8px;
 				height: 2px;
 				width: 35px;
-				background-color:rgb(255, 255, 255);
+				background-color:$white-color;
 				content: "";
 				transition-duration: .2s;
 				transition: transform .2s, top .2s .2s;

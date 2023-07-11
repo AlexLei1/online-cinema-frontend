@@ -1,10 +1,7 @@
 import { FC } from 'react'
-
 import Description from '@/components/ui/heading/Description'
 import Heading from '@/components/ui/heading/Heading'
-
 import { Meta } from '@/utils/meta'
-
 import CollectionItem from './CollectionItem'
 import styles from './Collections.module.scss'
 import { ICollection } from './collections.types'

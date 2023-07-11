@@ -1,8 +1,6 @@
 import { GetStaticProps, NextPage } from 'next'
 import { QueryClient, dehydrate, useQuery } from 'react-query'
-
 import Catalog from '@/components/screens/templates/catalog-movies/Catalog'
-
 import { MovieService } from '@/services/movie/movie.service'
 
 const TrendingPage: NextPage = () => {

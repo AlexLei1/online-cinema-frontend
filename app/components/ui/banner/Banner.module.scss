@@ -5,7 +5,7 @@
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	height: 320px;
+	height: 270px;
 	border-radius: 12px;
 	display: flex;
 	flex-direction: column;
@@ -15,32 +15,24 @@
 
 	@include fade-bg-gradient();
 
-	@include desktopL{
-		height: 250px;
+	@include desktopL {
+		height: 225px;
 		border-radius: 20px;
 	}
 	@include desktopM{
-		height: 300px;
-		border-radius: 20px;
-	}
-	@include desktopXS{
-		height: 250px;
-		border-radius: 15px;
-		box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.68);
+		height: 270px;
+		border-radius: 25px;
 	}	
 	@include tabletL{	
-		height: 200px;
-		border-radius: 15px;
-		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.68);
+		height: 225px;
+		border-radius: 20px;
 	}
 	@include mobileL{
-		height: 150px;
-		border-radius: 10px;
-		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.68);
+		height: 180px;
+		border-radius: 15px;
 	}
 	@include mobileS{
-		height: 100px;
+		height: 135px;
 		border-radius: 10px;
-		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.68);
 	}
 }

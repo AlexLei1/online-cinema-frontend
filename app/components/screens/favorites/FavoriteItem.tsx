@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-
 import FavoriteButton from '../single-movie/FavoriteButton/FavoriteButton'
-
 import styles from './Favorites.module.scss'
 import { IFavoriteItem } from './favorites.interface'
 

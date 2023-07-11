@@ -4,55 +4,48 @@
 .favorites {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 48px;
-}	//?
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	gap: 25px;
+}
 
 .containerLoader {
-	@apply w-full flex flex-wrap;
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	
 
 	.skeletonLoader {
 		position: relative;
 		margin-bottom: 32px;
 		height: 176px;
 		width: 31%;
-
-		&:nth-child(1),
-		&:nth-child(3) {
-			margin-right: 32px;
-		}
 	}
 }
 
 .itemWrapper {
-	@apply relative mb-8 h-44 mr-8 animate-fade transition-transform hover:-translate-y-3;
 	position: relative;
-	margin-bottom: 32px;
+	display: flex;
+	align-items: flex-end;
 	animation: fade .5s ease-in-out;
+	overflow: auto;
 	transition: $transition;
-	width: 31%;
+	min-width: 270px;
 	
 	&:hover {
-		--tw-translate-y: -12px;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-	}
-
-	&:nth-child(3n) {
-		margin-right: 0px;
+		transform: translate(0, -12px);
 	}
 
 	.item {
-		@apply relative z-1 w-full h-full flex items-end shadow-lg rounded-layout overflow-hidden;
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		height: 100%;
+		border-radius: 12px;
+		height: 176px;
 		display: flex;
 		align-items: end;
 		box-shadow: 0,0,0,50 #000000;
-		border-radius: 12px;
 		overflow: hidden;
 
 		@include fade-bg-gradient(0deg);
@@ -67,11 +60,10 @@
 		}
 
 		.title {
-			@apply relative z-3 text-center m-4 w-full font-semibold text-white text-shadow;
 			position: relative;
 			z-index: 3;
 			text-align: center;
-			margin:16px;
+			margin: 12px;
 			width: 100%;
 			font-weight: 600;
 			color: $white-color;
@@ -80,7 +72,6 @@
 	}
 
 	> button {
-		@apply z-3 block -left-3 -top-1 right-auto;
 		z-index: 3;
 		display: block;
 		left: -12px;

@@ -72,7 +72,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #505050;
+	background-color: $gray-color-600;
 	border: 3px solid $gray-color-600;
 	border-radius: 10px;
 }

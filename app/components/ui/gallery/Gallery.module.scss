@@ -6,12 +6,13 @@
 	position: relative;
 	display: flex;
 	align-items: flex-end;
+	animation: fade .5s ease-in-out;
 	overflow: auto;
 	transition: $transition;
 	width: 100%;
 
 	&:hover {
-		transform: scale(1.03);
+		transform: translate(0, -12px);
 	}
 
 	&.vertical {
@@ -26,42 +27,65 @@
 		@include mobileS{
 			height: 100px;
 		}
+
+		img {
+			object-position: center;
+			object-fit: cover;
+			pointer-events: none;
+		}
+
+		.content {
+			position: relative;
+			z-index: 2;
+			text-align: center;
+			margin: clamp(6px, 2vw, 12px);
+			width: 100%;
+	
+			.title {
+				font-size: clamp(10px, 2vw, 16px);
+				font-weight: 600;
+				margin-bottom: 4px;
+				color: white;
+				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+			}
+	
+			.subTitle {
+				font-size: clamp(10px , 2vw, 16px);
+				color: rgb(153 154 165 / 1);
+				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+			}
+		}
 	}
 
 	&.horizontal {
 		min-width: 270px;
 		height: 176px;
+		border-radius: 10px;
+
+		img {
+			object-position: center;
+			object-fit: cover;
+			pointer-events: none;
+		}
+
+		.content {
+			position: relative;
+			z-index: 2;
+			text-align: center;
+			margin: 12px;
+			width: 100%;
+	
+			.title {
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 4px;
+				color: white;
+				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+			}
+		}
 	}
 
 	&.withText {
 		@include fade-bg-gradient(0deg);
-	}
-
-	img {
-		object-position: center;
-		object-fit: cover;
-		pointer-events: none;
-	}
-
-	.content {
-		position: relative;
-		z-index: 2;
-		text-align: center;
-		margin: clamp(6px, 2vw, 12px) ;
-		width: 100%;
-
-		.title {
-			font-size: clamp(10px, 2vw, 16px);
-			font-weight: 600;
-			margin-bottom: 4px;
-			color: white;
-			text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-		}
-
-		.subTitle {
-			font-size: clamp(10px , 2vw, 16px);
-			color: rgb(153 154 165 / 1);
-			text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
-		}
 	}
 }

@@ -69,6 +69,7 @@
 		margin: 0px;
 
 		&:focus {
+			outline: none;
 			background-color: transparent;
 			border-color: $primary-color;
 		}
@@ -87,20 +88,23 @@
 
 .uploadField {
 	position: relative;
+
 	.uploadFlex {
 		display: flex;
+		flex-direction: column;
+		gap: 10px;
 
 		> .uploadImageContainer {
 			flex-shrink: 0;
 			position: relative;
-			width: 96px;
+			width: 100%;
 			height: 96px;
 
 			img {
 				object-position: center;
 				object-fit: cover;
 				pointer-events: none;
-				border-radius: 0.375rem/* 6px */;
+				border-radius: 6px;
 			}
 
 			> span {
@@ -110,41 +114,38 @@
 
 		> label {
 			display: block;
-			margin-right: 24px;
 
 			.error {
 				position: relative;
 				bottom: -12px;
 			}
-
+			
 			> span {
 				font-size: $fz-xxs;
 				line-height: 16px;
 				text-transform: uppercase;
 				color: $gray-color-600;
 				display: block;
-				margin-bottom: 16;
+				margin-bottom: 16px;
 			}
 
 			> input {
 				display: block;
 				width: 100%;
 				font-size: $fz-sm;
-				line-height: 20px;
 				color: $gray-color-600;
 				opacity: 0.7;
-				color: $white-color;
 				transition: $transition;
+				border: none;
 
-				&:file-selector-button {
+				&::file-selector-button {
 					margin-right: 16px;
-					padding: 8px 16px;
-					border-radius: 9999px;
+					padding: 5px 12px;
+					border-radius: 12px;
 					border-width: 0px;
 					font-size: $fz-sm;
-					line-height: 20px;
-					font-weight: 600;
-					background-color: $primary-color;
+					color: $white-color;
+					background-color: $gray-color-700;
 				}
 			}
 
@@ -155,15 +156,15 @@
 	}
 }
 
-// .error {
-// 	position: absolute;
-// 	bottom: -24px;
-// 	left: 0px;
-// 	font-size: 14px;
-//   line-height: 20px;
-// 	width: 100%;
-// 	color: red;
-// }
+.error {
+	position: absolute;
+	bottom: -24px;
+	left: 0px;
+	font-size: 14px;
+  line-height: 20px;
+	width: 100%;
+	color: red;
+}
 
 .editorWrapper {
 	border-width: 0px;

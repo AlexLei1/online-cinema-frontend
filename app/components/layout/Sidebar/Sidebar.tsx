@@ -8,9 +8,12 @@ interface ISidebar {
 
 const Sidebar: FC<ISidebar> = ({isShow}) => {
 	return (
-		<div hidden={isShow} className={styles.sidebar}>
-			<MoviesContainer />
-		</div>
+		<>
+			{ !isShow 
+				? <div hidden={isShow} className={styles.sidebar}><MoviesContainer /></div>
+				: null
+			}
+		</>
 	)
 }
 

@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
@@ -178,9 +178,19 @@ input:focus {
 	height: 200px;
 }
 
+// .menuСlosed {
+// 	padding: 0px;
+
+// 	@include desktopM {
+// 		padding: 0px 50px;
+// 		filter: blur(10px);
+// 		pointer-events: none;
+// 		cursor: default;
+// 	}
+// }
 .menuOpen {
 	padding: 0px 315px;
-
+	
 	@include desktopM {
 		padding: 0px 50px;
 		filter: blur(10px);

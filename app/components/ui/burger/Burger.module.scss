@@ -1,6 +1,10 @@
 @import 'assets/styles/variables';
 @import 'assets/styles/mixins';
 
+.burger {
+	display: none;
+}
+
 @include desktopM{
 	.burger {
 		display: flex;
@@ -14,7 +18,7 @@
 			width: 30px;
 			background-color: $white-color;
 			transition-duration: .2s;
-			transition-delay: .2s;	
+			transition-delay: .2s;
 	
 			&::before {
 				left: 0;

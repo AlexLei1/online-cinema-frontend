@@ -8,10 +8,15 @@ interface INavigation {
 }
 
 const Navigation: FC<INavigation> = ({isShow}) => {
-	return (
-		<div hidden={isShow} className={styles.navigation}>
-			<MenuContainer />
-		</div>
+	return ( 
+		<>
+			{ !isShow 
+				? <div className={styles.navigation}>
+						<MenuContainer />
+					</div>
+				: null
+			}
+		</>
 	)
 }
 

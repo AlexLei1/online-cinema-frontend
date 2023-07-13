@@ -10,6 +10,7 @@
 	padding: 8px 8px;
 	transition: $transition;
 
+
 	@include desktopM {
 		max-width: 150px;
 		padding: 6px 6px;	
@@ -35,6 +36,7 @@
 		width: 100%;
 		outline: 2px solid transparent;
  		outline-offset: 2px;
+		border: none;
 		
 
 		&::placeholder {

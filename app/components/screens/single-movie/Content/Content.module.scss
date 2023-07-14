@@ -30,7 +30,7 @@
 
 	.rating {
 		position: absolute;
-		bottom: 32px;
+		bottom: 20px;
 		right: 32px;
 		display: flex;
 		align-items: center;
@@ -54,12 +54,14 @@
 		}
 		@include mobileL{
 			font-size: 16px;
-			bottom: 20px;
+			bottom: 0px;
 		}
 		@include mobileS{
 			font-size: 14px;
-			bottom: 10px;
+			bottom: 0px;
+			right: 55px;
 		}
+
 	}
 
 	.details {

@@ -12,11 +12,11 @@ const Banner: FC<IBanner> = ({ imagePath, Detail }) => {
 	return (
 		<div className={styles.banner}>
 			<Image
-				alt=""
+				alt="banner"
 				src={imagePath}
 				draggable={false}
 				layout="fill"
-				className="image-like-bg object-top"
+				objectFit='cover'
 				unoptimized
 				priority
 			/>

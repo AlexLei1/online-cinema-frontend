@@ -63,13 +63,20 @@
 			> div {
 				transition: $transition;
 				z-index: 1;
+				width: 100%;
+				height: 140px;
+				position: relative;
+				@include desktopM {
+					height: 120px;
+				}
 				
-				> img {
-				
-					transition: $transition;
-					border-radius: 8px;
-					@include desktopM{
-						filter: blur(5px);
+				> span {
+					> img {
+						transition: $transition;
+						border-radius: 8px;
+						@include desktopM{
+							filter: blur(5px);
+						}
 					}
 				}
 			}

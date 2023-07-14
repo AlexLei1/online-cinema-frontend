@@ -67,7 +67,9 @@
 		color: $gray-color-500;
 		width: 100%;
 		margin: 0px;
-
+		padding: 12px;
+		font-size: 16px;
+		font-family: 'Outfit', sans-serif;
 		&:focus {
 			outline: none;
 			background-color: transparent;

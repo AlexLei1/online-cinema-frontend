@@ -21,12 +21,12 @@
 		color: white;
 		
 		&::after {
+			content: '';
 			right: 2px;
 			width: 2px;
 			height: 0px;
 			position: absolute;
 			background-color: transparent;
-			content: '';
 			top: 20%;
 			transition: $transition;
 		}

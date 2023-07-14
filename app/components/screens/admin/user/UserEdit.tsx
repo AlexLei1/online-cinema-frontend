@@ -2,13 +2,12 @@ import { useUserEdit } from './useUserEdit'
 import { IUserEditInput } from './user-edit.interface'
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-
 import AuthFields from '@/components/shared/user/AuthFields'
-
 import AdminNavigation from '@/ui/admin-navigation/AdminNavigation'
 import Button from '@/ui/form-elements/Button'
 import Heading from '@/ui/heading/Heading'
 import SkeletonLoader from '@/ui/skeleton-loader/SkeletonLoader'
+import styles from './UserEdit.module.scss'
 
 import { Meta } from '@/utils/meta'
 
@@ -24,7 +23,7 @@ const UserEdit: FC = () => {
 		<Meta title="Edit user">
 			<AdminNavigation />
 			<Heading title="Edit user" />
-			<form onSubmit={handleSubmit(onSubmit)} className="admin-form">
+			<form onSubmit={handleSubmit(onSubmit)} className={styles.adminForm}>
 				{isLoading ? (
 					<SkeletonLoader count={3} />
 				) : (
@@ -43,7 +42,7 @@ const UserEdit: FC = () => {
 										e.preventDefault()
 										field.onChange(!field.value)
 									}}
-									className="text-link block mb-7"
+									className={styles.button}
 								>
 									{field.value ? 'Make it regular user' : 'Make it admin'}
 								</button>

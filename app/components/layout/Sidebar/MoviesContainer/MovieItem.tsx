@@ -21,23 +21,21 @@ const MovieItem: FC<{ movie: IWidgetMovie }> = ({ movie }) => {
 				<Link href={getMovieUrl(movie.slug)}>
 					{(width >= 1200) ? 
 					<div>
-						{/* <img src={movie.poster}  alt={movie.title} /> */}
 						<Image
 							alt={movie.title}
 							src={movie.poster}
-							width={65}
-							height={97}
+							layout="fill"
+							objectFit='cover'
 							draggable={false}
 							priority
 						/>
 					</div> : 
 					<div onClick={() => toggleBurger({isShow})}>
-						{/* <img src={movie.poster}  alt={movie.title} /> */}
 						<Image
 							alt={movie.title}
 							src={movie.poster}
-							width={65}
-							height={97}
+							layout="fill"
+							objectFit='cover'
 							draggable={false}
 							priority
 						/>
@@ -67,11 +65,3 @@ const MovieItem: FC<{ movie: IWidgetMovie }> = ({ movie }) => {
 }
 
 export default MovieItem
-{/* <Image
-			alt={movie.title}
-			width={65}
-			height={97}
-			src={movie.poster}
-			draggable={false}
-			priority
-/> */}

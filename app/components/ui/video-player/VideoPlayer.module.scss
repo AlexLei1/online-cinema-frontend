@@ -14,18 +14,22 @@
 		max-width: 700px;
 		border-radius: 12px;
 
+		.video {
+			max-width: 100%;
+			display: block;
+		}
 		.controls {
-			position: relative;
+			position: absolute;
 			display: flex;
 			align-items: center;
+			text-align: center;
 			justify-content: space-between;
-			position: absolute;
-			bottom: 12px;
+			bottom: 8px;
 			left: 24px;
 			right: 24px;
 			
 			@include mobileL {
-				bottom: 4px;
+				bottom: 3px;
 				left: 12px;
 				right: 12px;
 			}
@@ -36,28 +40,30 @@
 				justify-content: space-between;
 
 				> button {
+					background-color: transparent;
 					font-size: 24px;
-					line-height: 32px;
+					line-height: 0;
 					color: $white-color;
-					margin-right: 12px;
 					outline: 2px solid transparent;
 					outline-offset: 2px;
 					opacity: 0.6;
 					transition: $transition;
+		
 	
 					&:hover {
 						opacity: 1;
 					}
 
 					@include mobileL {
-						font-size: 25px;
+						font-size: 20px;
 						margin-right: 5px;
 					}
 				}
 	
 				.playButton {
 					font-size: 36px;
-					line-height: 40px;
+					line-height: 0;
+					
 
 					@include mobileL {
 						font-size: 26px;
@@ -94,8 +100,9 @@
 	
 				> button {
 					color:$white-color;
+					background-color: transparent;
 					font-size: 30px;
-					line-height: 36px;
+					line-height: 0;
 					outline: 2px solid transparent;
 					outline-offset: 2px;
 					opacity: 0.6;
@@ -108,15 +115,10 @@
 					&:hover {
 						opacity: 1;
 					}
-					
 				}
 			}
-
-		
 		}
 
-		
-	
 		.progressBarContainer {
 			position: absolute;
 			left: 16px;

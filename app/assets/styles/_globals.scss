@@ -1,36 +1,5 @@
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
-:root {
-	--primary-color: #e6e6e6;
-	--gray-color-300: #d9dae8;
-	--gray-color-500: #999AA5;
-	--gray-color-600: #66676E;
-	--gray-color-700: #39393f;
-	--gray-color-800: #242529;
-	--gray-color-900: #191B1F;
-	--gray-color-950: #101215;
-	--yellow-color-700: #F5C521;
-	--white-color: rgb(255, 255, 255);
-	--black-color: rgb(255, 255, 255);
-	--dark-navy: #020c1b;
-
-	--fz-xxs: 12px;
-	--fz-xs: 13px;
-	--fz-sm: 14px;
-	--fz-md: 16px;
-	--fz-lg: 18px;
-	--fz-xl: 20px;
-	--fz-xxl: 22px;
-	--fz-sub-heading: clamp(14px, 5vw, 28px);
-	--fz-heading: clamp(16px, 5vw, 38px);
-
-	--shadow-list: 0px 0px 18px 0px var(--primary-color);
-	--shadow-logo: 3px 3px 2px var(--primary-color);
-}
 
 html,
 body {
@@ -38,6 +7,7 @@ body {
 	margin: 0;
 	font-family: 'Outfit', sans-serif;
 	background-color: $gray-color-900;
+
 }
 
 section {
@@ -94,16 +64,13 @@ input[type='file']::-webkit-file-upload-button {
 	cursor: pointer;
 	outline: 2px solid transparent;
   outline-offset: 2px;
+	
 }
 
 input:focus {
 	box-shadow: none !important;
 }
 
-.admin-form {
-	width: 50%;
-	margin-top: 48px;
-}
 
 /* Slide animation */
 .slide-animation-enter {
@@ -178,16 +145,6 @@ input:focus {
 	height: 200px;
 }
 
-// .menuСlosed {
-// 	padding: 0px;
-
-// 	@include desktopM {
-// 		padding: 0px 50px;
-// 		filter: blur(10px);
-// 		pointer-events: none;
-// 		cursor: default;
-// 	}
-// }
 .menuOpen {
 	padding: 0px 315px;
 	

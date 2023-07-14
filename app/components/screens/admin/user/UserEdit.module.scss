@@ -1,0 +1,28 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+.adminForm {
+	width: 50%;
+	margin-top: 48px;
+	@include tabletS{
+		width: 100%;
+	}
+}
+
+.button {
+	background-color: transparent;
+	font-family: 'Outfit', sans-serif;
+	font-size: 16px;
+	display: block;
+	text-underline-offset: 4px;
+  color: rgba($white-color, .5);
+  transition: $transition;
+  text-decoration-line: underline;
+  text-decoration-color: rgba($white-color, .6);
+	margin-bottom:28px;
+
+	&:hover {
+		text-decoration-color: rgba($white-color, .9);
+		color: rgba($white-color, .9);
+	}
+}

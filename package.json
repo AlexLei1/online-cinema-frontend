@@ -1,11 +1,11 @@
 {
 	"name": "movie-app-front-end",
 	"author": {
-		"email": "info@htmllessons.ru",
-		"name": "Max Shushval (htmllessons.ru)",
-		"url": "https://htmllessons.ru"
+		"email": "sasha.volkov2015@yandex.ru",
+		"name": "Alex Lei",
+		"url": "https://vk.com/sasha.volkov2015"
 	},
-	"description": "Cinema application for premium intensive in htmllessons.ru",
+	"description": "favorite project to demonstrate skills",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",

@@ -2,15 +2,10 @@ import { useRouter } from 'next/router'
 import { ChangeEvent, useMemo, useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
 import { toastr } from 'react-redux-toastr'
-
 import { ITableItem } from '@/ui/admin-table/AdminTable/admin-table.interface'
-
 import { useDebounce } from '@/hooks/useDebounce'
-
 import { GenreService } from '@/services/genre/genre.service'
-
 import { toastError } from '@/utils/api/withToastrErrorRedux'
-
 import { getAdminUrl } from '@/configs/url.config'
 
 export const useGenres = () => {

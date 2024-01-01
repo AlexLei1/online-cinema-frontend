@@ -2,22 +2,17 @@ import { IGenreEditInput } from './genre-edit.interface'
 import { useGenreEdit } from './useGenreEdit'
 import dynamic from 'next/dynamic'
 import { FC } from 'react'
-import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { stripHtml } from 'string-strip-html'
-
 import formStyles from '@/components/shared/admin/adminForm.module.scss'
 import SlugField from '@/components/ui/form-elements/SlugField/SlugField'
 import SkeletonLoader from '@/components/ui/skeleton-loader/SkeletonLoader'
-
 import AdminNavigation from '@/ui/admin-navigation/AdminNavigation'
 import Button from '@/ui/form-elements/Button'
 import Field from '@/ui/form-elements/Field'
 import Heading from '@/ui/heading/Heading'
-
 import { Meta } from '@/utils/meta'
 import generateSlug from '@/utils/string/generateSlug'
-
-// "^[./]((?!scss).)*$",
 
 const DynamicTextEditor = dynamic(
 	() => import('@/ui/form-elements/TextEditor'),

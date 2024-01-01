@@ -1,11 +1,7 @@
 import axios, { axiosClassic } from 'api/interceptors'
-
 import { IGenreEditInput } from '@/screens/admin/genre/genre-edit.interface'
-
 import { ICollection } from '@/components/screens/collections/collections.types'
-
 import { IGenre } from '@/shared/types/movie.types'
-
 import { getGenresUrl } from '@/configs/api.config'
 
 export const GenreService = {

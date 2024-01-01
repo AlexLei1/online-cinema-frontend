@@ -14,9 +14,8 @@ const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 	const {width} = useWidth()
 	const { toggleBurger } = useActions()
 	const {isShow} = useTypedSelector(state => state.burger)
-
+	
 	return (
-		
 		<li className={cn({[styles.active]: asPath === item.link})}>
 			<Link href={item.link}>
 				{(width >= 1200) ? <a><MaterialIcon name={item.icon} /><span>{item.title}</span></a> : 

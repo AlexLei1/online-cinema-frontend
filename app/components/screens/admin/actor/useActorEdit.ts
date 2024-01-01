@@ -3,12 +3,9 @@ import { useRouter } from 'next/router'
 import { SubmitHandler, UseFormSetValue } from 'react-hook-form'
 import { useMutation, useQuery } from 'react-query'
 import { toastr } from 'react-redux-toastr'
-
 import { ActorService } from '@/services/actor/actor.service'
-
 import { toastError } from '@/utils/api/withToastrErrorRedux'
 import { getKeys } from '@/utils/object/getKeys'
-
 import { getAdminUrl } from '@/configs/url.config'
 
 export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {

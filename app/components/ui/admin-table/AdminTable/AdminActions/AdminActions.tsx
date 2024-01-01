@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { MaterialIcon } from '../../../icons/MaterialIcon'
 import styles from './AdminActions.module.scss'
+import { MaterialIcon } from '@/components/ui/icons/MaterialIcon'
 
 interface IAdminActions {
 	editUrl: string

@@ -10,6 +10,7 @@ export interface IFieldProps {
 type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps
 
 export interface IField extends TypeInputPropsField {}
+
 export interface IUploadField {
 	folder?: string
 	image?: string

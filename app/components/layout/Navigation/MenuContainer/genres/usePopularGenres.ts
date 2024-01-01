@@ -13,7 +13,7 @@ export const usePopularGenres = () => {
 				data
 					.map(
 						(genre): IMenuItem => ({
-							icon: genre.icon,
+							icon: genre.icon ? genre.icon : 'MdOutlineStarPurple500',
 							link: getGenreUrl(genre.slug),
 							title: genre.name,
 						})

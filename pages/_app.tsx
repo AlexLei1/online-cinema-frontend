@@ -6,6 +6,7 @@ import '../app/assets/styles/index.scss'
 type TypeAppProps = AppProps & TypeComponentAuthFields
 
 const MyApp = ({ Component, pageProps }: TypeAppProps) => {
+	
 	return (
 		<MainProvider Component={Component}>
 			<Component {...pageProps} />

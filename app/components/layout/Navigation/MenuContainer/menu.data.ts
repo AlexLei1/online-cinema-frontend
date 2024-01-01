@@ -31,4 +31,4 @@ const userMenu: IMenu = {
 	items: [],
 }
 
-export const menus: IMenu[] = [firstMenu, userMenu]
+export const menu: IMenu[] = [firstMenu, userMenu]

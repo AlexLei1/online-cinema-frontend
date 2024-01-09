@@ -24,7 +24,7 @@ const MovieEdit: FC = () => {
 	const {
 		handleSubmit,
 		register,
-		formState: { errors },
+		formState: { errors, isValid },
 		control,
 		setValue,
 		getValues,
@@ -185,7 +185,7 @@ const MovieEdit: FC = () => {
 						/>
 					</div>
 
-					<Button>Update</Button>
+					<Button >Update</Button>
 				</form>
 			)}
 		</Meta>

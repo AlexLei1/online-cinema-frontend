@@ -18,6 +18,7 @@ This platform provides users with access to a wide range of films and cartoons. 
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
+![homePage](https://github.com/AlexLei1/online-cinema-frontend/tree/main/public/image/home.png)
 <img src='https://github.com/AlexLei1/online-cinema-frontend/tree/main/public/image/home.png'/>
 </div>
 

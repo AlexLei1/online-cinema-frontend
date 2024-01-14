@@ -15,30 +15,36 @@ This platform provides users with access to a wide range of films and cartoons. 
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
+
 <h3 align='center'>Home Page 🏡</h3>
 
 <div align='center'>
-<img src='https://github.com/AlexLei1/online-cinema-frontend/tree/main/public/image/home.png'/>
+	<img src='https://github.com/AlexLei1/online-cinema-frontend/tree/main/public/image/home.png'/>
 </div>
 
-<br><br>
+<br>
+<br>
 
 <h3 align='center'>Categories Page 👇</h3>
 
 <div align='center'>
-<img src=''/>
+	<img src=''/>
+</div>
 
 <br>
 <br>
+
 <h3 align='center'>Product Page 🎁</h3>
 
 <div align='center'>
-<img src=''/>
+	<img src=''/>
+</div>
 
 <br>
 <br>
+
 <h3 align='center'>Shopping Cart 🛒</h3>
 
 <div align='center'>
-<img src=''/>
+	<img src=''/>
 </div>

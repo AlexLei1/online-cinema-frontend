@@ -11,7 +11,7 @@ const firstMenu: IMenu = {
 		{
 			icon: 'MdExplore',
 			link: '/genres',
-			title: 'Discovery',
+			title: 'Genres',
 		},
 		{
 			icon: 'MdRefresh',

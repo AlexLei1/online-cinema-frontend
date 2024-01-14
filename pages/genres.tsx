@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			props: { collections },
 		}
 	} catch (e) {
-		// console.log(errorCatch(e))
+			// console.log(errorCatch(e))
 
 		return {
 			props: {},

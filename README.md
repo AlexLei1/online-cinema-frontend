@@ -1,21 +1,44 @@
-## Description
+<div align='center'><img src=''/></div>
 
-Pet-project для резюме, в котором продемонстрировал свои навыки работы с различными front-end технологиями.
+<h2>About the project</h2>
 
-## Getting Started
+<p>
+This platform provides users with access to a wide range of films and cartoons. This is a unique solution for those who want to enjoy their favorite films and TV series at any time and from anywhere in the world, using various devices such as computers, smartphones and tablets.
+</p>
 
-First, run the development server:
+<h3>Build with:</h3>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+» SASS/SCSS <br>
+» Next JS <br>
+» Typescript <br>
+» ... <br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>Screenshots of the Project 📸</h2>
+<br>
+<h3 align='center'>Home Page 🏡</h3>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<div align='center'>
+<img src='https://github.com/AlexLei1/online-cinema-frontend/tree/main/public/image/home.png'/>
+</div>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<br><br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h3 align='center'>Categories Page 👇</h3>
+
+<div align='center'>
+<img src=''/>
+
+<br>
+<br>
+<h3 align='center'>Product Page 🎁</h3>
+
+<div align='center'>
+<img src=''/>
+
+<br>
+<br>
+<h3 align='center'>Shopping Cart 🛒</h3>
+
+<div align='center'>
+<img src=''/>
+</div>

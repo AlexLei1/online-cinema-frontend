@@ -1,4 +1,4 @@
-<div align='center'><img src=''/></div>
+<div align='center'><img src='public/favicons/apple-touch-icon-180x180.png'/></div>
 
 <h2>About the project</h2>
 
@@ -11,7 +11,8 @@ This platform provides users with access to a wide range of films and cartoons. 
 » SASS/SCSS <br>
 » Next JS <br>
 » Typescript <br>
-» ... <br>
+» draft-js<br>
+» Redux<br>
 
 <h2>Screenshots of the Project 📸</h2>
 <br>

@@ -19,11 +19,7 @@ This platform provides users with access to a wide range of films and cartoons. 
 <h3 align='center'>Home</h3>
 
 <div align='center'>
-<<<<<<< HEAD
 	<img src='https://sun9-73.userapi.com/impg/3cx-2SMXgPCcQyi_ezSGciE5LZKepqlKQqBekA/dVrCfyRLLP4.jpg?size=2560x1775&quality=95&sign=9873e013d69f3d710e9f023b96287d0e&type=album'/>
-=======
-<img src='https://sun9-72.userapi.com/impg/Ij5qiciaZHK9Vy7hL7NaJzIzVpNqboOWx5iq8A/wK3XqG6ftVg.jpg?size=2560x1781&quality=95&sign=2d26a5de20bafdc0eed7ef8588c0b14f&type=album'/>
->>>>>>> 3ecfc1d4dcaa3bad06ff31aa543034bbe229f406
 </div>
 
 <br>

@@ -5,12 +5,14 @@ import { getActorUrl, getGenreUrl } from '@/configs/url.config'
 import FavoriteButton from '../FavoriteButton/FavoriteButton'
 import styles from './Content.module.scss'
 import ContentList from './ContentList/ContentList'
+import { useAuth } from '@/hooks/useAuth'
 
 const Content: FC<{ movie: IMovie }> = ({ movie }) => {
+	const {user}= useAuth()
 	return (
 		<div className={styles.content}>
 			<h1>{movie.title}</h1>
-			<FavoriteButton movieId={movie._id} />
+			{user && <FavoriteButton movieId={movie._id} />}
 			<div className={styles.rating}>
 				<MaterialIcon name="MdStarRate" />
 				<span>{movie.rating.toFixed(1)}</span>

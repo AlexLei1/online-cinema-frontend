@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	try {
 		const { data: movies } = await MovieService.getMovies()
 		const { data: dataActors } = await ActorService.getAll()
-		const datatTrendingMovies = await MovieService.getMostPopularMovies()
+		const dataTrendingMovies = await MovieService.getMostPopularMovies()
 
 		const slides: ISlide[] = movies.slice(0, 3).map((m) => ({
 			_id: m._id,
@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			},
 		}))
 
-		const trendingMovies: IGalleryItem[] = datatTrendingMovies
+		const trendingMovies: IGalleryItem[] = dataTrendingMovies
 			.slice(0, 7)
 			.map((m) => ({
 				name: m.title,
@@ -51,6 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
 				slides,
 				trendingMovies,
 			} as IHome,
+			revalidate: 60,
 		}
 	} catch (error) {
 		console.log(errorCatch(error))

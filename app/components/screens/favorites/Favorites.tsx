@@ -6,11 +6,15 @@ import { getMovieUrl } from '@/configs/url.config'
 import FavoriteItem from './FavoriteItem'
 import styles from './Favorites.module.scss'
 import { useFavorites } from './useFavorites'
+import { useAuth } from '@/hooks/useAuth'
+import Error404 from '../../../../pages/404'
 
 const Favorites: FC = () => {
 	const { favoritesMovies, isLoading } = useFavorites()
+	const {user} = useAuth()
 
-	return (
+	if(!user) return <Error404/>
+	return ( 
 		<Meta title="Favorites">
 			<Heading title={'Favorites'} />
 			<section className={styles.favorites}>

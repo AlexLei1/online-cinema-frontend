@@ -1,12 +1,9 @@
-// import { errorCatch } from 'api/api.helpers'
+import { errorCatch } from 'api/api.helpers'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-
 import Genre from '@/screens/genre/Genre'
 import { IGenrePage } from '@/screens/genre/genre.types'
-
 import { GenreService } from '@/services/genre/genre.service'
 import { MovieService } from '@/services/movie/movie.service'
-
 import Error404 from '../404'
 
 const GenrePage: NextPage<IGenrePage> = ({ genre, movies }) => {
@@ -25,7 +22,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 			fallback: 'blocking',
 		}
 	} catch (e) {
-		// console.log(errorCatch(e))
+		console.log(errorCatch(e))
 
 		return {
 			paths: [],
@@ -42,9 +39,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 		return {
 			props: { movies, genre },
+			revalidate: 60,
 		}
 	} catch (e) {
-		// console.log(errorCatch(e))
+		console.log(errorCatch(e))
 
 		return {
 			props: {},

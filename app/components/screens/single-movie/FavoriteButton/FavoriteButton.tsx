@@ -5,12 +5,17 @@ import { UserService } from '@/services/user/user.service'
 import { toastError } from '@/utils/api/withToastrErrorRedux'
 import { useFavorites } from '../../favorites/useFavorites' 
 import styles from './FavoriteButton.module.scss'
-import HeartImage from './heart-animation.png'
+import { useAuth } from '@/hooks/useAuth'
 
 const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
-	const [isSmashed, setIsSmashed] = useState(false)
 
+	const {user}= useAuth()
+	
+	if(!user) return null
+
+	const [isSmashed, setIsSmashed] = useState(false)
 	const { favoritesMovies, refetch } = useFavorites()
+
 
 	useEffect(() => {
 		if (favoritesMovies) {
@@ -39,7 +44,7 @@ const FavoriteButton: FC<{ movieId: string }> = ({ movieId }) => {
 			className={cn(styles.button, {
 				[styles.animate]: isSmashed,
 			})}
-			style={{ backgroundImage: `url(${HeartImage.src})` }}
+			style={{ backgroundImage: `url('/heart-animation.png')` }}
 		/>
 	)
 }
